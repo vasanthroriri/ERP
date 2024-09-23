@@ -1,11 +1,10 @@
 <?php
 session_start();
-include("../db/dbConnection.php");
+
 include("../url.php");    
-   $selQuery = "SELECT * FROM `enquire_tbl` WHERE enquire_status='Active' AND entity_id = 1
-   ORDER BY enquire_id DESC";
+   
     
-    $resQuery = mysqli_query($conn , $selQuery); 
+    
     
 ?>
 <!doctype html>
@@ -67,26 +66,14 @@ include("../url.php");
 									</tr>
 								</thead>
 								<tbody>
-                                <?php $i=1; while($row = mysqli_fetch_array($resQuery , MYSQLI_ASSOC)) { 
-                           
-                                        $enquire_id  = $row['enquire_id'];  
-                                        $name=$row['e_name'];   
-                                        $enquire_details  = $row['enquire_details'];  
-                                        $email   = $row['e_email'];  
-                                        $phone          = $row['e_mobile'];
-                                        $address        = $row['e_address'];   
-                                       
-                                        $compName=$row['e_company_name'];
-
                                 
-                      ?>
                       <tr>
-                       <td><?php echo $i; $i++; ?></td>
-                      <td><?php echo $name; ?></td>
-                      <td><?php echo $compName; ?></th>
-                      <td><?php echo $enquire_details; ?></td>
-                      <td><?php echo $phone; ?></td>
-                      <td><?php echo $address; ?></td>
+                       <td>1</td>
+                      <td>name</td>
+                      <td>compName</th>
+                      <td>enquire_details</td>
+                      <td>phone</td>
+                      <td>address</td>
                       
                       <td>
                           <!-- <button class="btn btn-sm btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="top" title="View" onclick="goViewClient(<?php echo $enquire_id; ?>);" ><i class="lni lni-eye"></i></button> -->
@@ -97,7 +84,6 @@ include("../url.php");
                           
                       </td>
                     </tr>
-                    <?php } ?>   
 								</tbody>
 								
 							</table>
@@ -134,14 +120,7 @@ include("../url.php");
      <!-- Include the function.js -->
      <script src="../assets/js/function.js"></script>
      <!-- Initialize tooltips -->
-     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-                return new bootstrap.Tooltip(tooltipTriggerEl)
-            })
-        });
-    </script>
+     
     <script>
         function goViewClient(id){
             
