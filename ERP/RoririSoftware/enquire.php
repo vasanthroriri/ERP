@@ -42,12 +42,13 @@ include("../url.php");
                 <div class="page-title-right">
                     <h2 class="page-title">Enquiry</h2>
                     <div class="position-relative" style="height: 80px;"> <!-- Adjust height as needed -->
-                    <button type="button" id="addEnquireBtn" class="btn btn-primary position-absolute top-0 end-0" data-bs-toggle="modal" data-bs-target="#addEnquireModal">Add New Enquiry</button>
+                    <button type="button" id="addEnquireBtn" class="btn btn-primary radius-30 position-absolute top-0 end-0" data-bs-toggle="modal" data-bs-target="#addEnquireModal"><i class='bx bx-cloud-upload mr-1'></i>Add New Enquiry</button>
                     </div>
 
                 </div>
                    
             </div>
+            
 
 				<div class="card">
 					<div class="card-body">
@@ -55,7 +56,7 @@ include("../url.php");
 							<table id="example2" class="table table-striped table-bordered">
 								<thead>
 									<tr>
-                                        <th>S. No</th>
+                                        <th>S.No</th>
 										<th>Name</th>
                                         <th>Company</th>
                                         <th>Enquiry</th>
