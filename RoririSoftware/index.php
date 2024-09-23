@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <?php   session_start();
-include("../db/dbConnection.php");
 include("../url.php");
  include("head.php");?>
 
@@ -28,18 +27,7 @@ include("../url.php");
 									<div>
 										<p class="mb-0 text-secondary">Total Employees</p>
 										<h4 class="my-1">
-										<?php
-											$selEmp = "SELECT count(basic_id) as emp_count FROM additional_details WHERE entity_id=1 AND add_status='Active'";
-											$resultEmp = $conn->query($selEmp);
-
-											if ($resultEmp) {
-												$rowEmp = $resultEmp->fetch_assoc();
-												$empCount = $rowEmp['emp_count'];
-												echo $empCount;
-											} else {
-												echo "Error: " . $conn->error;
-											}
-											?>
+										24
 										</h4>
 										<!-- <p class="mb-0 font-13 text-success"><i class="bx bxs-up-arrow align-middle"></i>$34 from last week</p> -->
 									</div>
@@ -56,18 +44,7 @@ include("../url.php");
 									<div>
 										<p class="mb-0 text-secondary">Total Customers</p>
 										<h4 class="my-1">
-										<?php
-											$selClient = "SELECT COUNT(client_id) as client_count FROM client_tbl where client_status='Active'";
-											$resultClinet = $conn->query($selClient);
-
-											if ($resultClinet) {
-												$rowClient = $resultClinet->fetch_assoc();
-												$clientCount = $rowClient['client_count'];
-												echo $clientCount;
-											} else {
-												echo "Error: " . $conn->error;
-											}
-											?>
+										5
 										</h4>
 										<!-- <p class="mb-0 font-13 text-success"><i class='bx bxs-up-arrow align-middle'></i>$24 from last week</p> -->
 									</div>
@@ -84,18 +61,7 @@ include("../url.php");
 									<div>
 										<p class="mb-0 text-secondary">Projects</p>
 										<h4 class="my-1">
-										<?php
-											$selProject = "SELECT COUNT(project_id)as project_count FROM project_tbl where status='Active'";
-											$resultProject = $conn->query($selProject);
-
-											if ($resultProject) {
-												$rowProject = $resultProject->fetch_assoc();
-												$projectCount = $rowProject['project_count'];
-												echo $projectCount;
-											} else {
-												echo "Error: " . $conn->error;
-											}
-											?>
+										6
 										</h4>
 										<!-- <p class="mb-0 font-13 text-danger"><i class='bx bxs-down-arrow align-middle'></i>$34 from last week</p> -->
 									</div>
@@ -112,18 +78,7 @@ include("../url.php");
 									<div>
 										<p class="mb-0 text-secondary">Enquiry</p>
 										<h4 class="my-1">
-										<?php
-											$selEnquire = "SELECT COUNT(enquire_id)as enquire_count FROM `enquire_tbl` WHERE enquire_status='Active'";
-											$resultEnquire = $conn->query($selEnquire);
-
-											if ($resultEnquire) {
-												$rowEnquire = $resultEnquire->fetch_assoc();
-												$enquireCount = $rowEnquire['enquire_count'];
-												echo $enquireCount;
-											} else {
-												echo "Error: " . $conn->error;
-											}
-											?>
+										5
 										</h4>
 										<!-- <p class="mb-0 font-13 text-danger"><i class='bx bxs-down-arrow align-middle'></i>12.2% from last week</p> -->
 									</div>
