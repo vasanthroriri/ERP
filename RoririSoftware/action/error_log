@@ -1,0 +1,692 @@
+[09-Aug-2024 07:23:37 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:23:37 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:23:37 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:23:46 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:23:46 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:23:46 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:23:57 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:23:57 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:23:57 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:23:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 07:23:57 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:23:57 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:23:57 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:23:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 07:24:08 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:24:08 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:24:08 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:24:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 07:24:08 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:24:08 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:24:08 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:24:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 07:24:46 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:24:46 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:24:46 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:25:02 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:25:02 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:25:02 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:25:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 07:25:02 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:25:02 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:25:02 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:25:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 07:26:35 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:26:35 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:26:35 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:26:44 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:26:44 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:26:44 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:26:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 07:26:44 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:26:44 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:26:44 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:26:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 07:26:52 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:26:52 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:26:52 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:26:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 07:26:52 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:26:52 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:26:52 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:26:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 07:27:40 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:27:40 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:27:40 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:27:46 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:27:46 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:27:46 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:27:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 07:27:46 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:27:46 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:27:46 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 07:27:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 07:32:25 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 07:32:25 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 07:32:25 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 07:32:25 UTC] PHP Warning:  Undefined variable $conn in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 14
+[09-Aug-2024 07:32:25 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php:14
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php(14): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 14
+[09-Aug-2024 07:32:37 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 07:32:37 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 07:32:37 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 07:32:37 UTC] PHP Warning:  Undefined variable $conn in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 14
+[09-Aug-2024 07:32:37 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php:14
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php(14): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 14
+[09-Aug-2024 08:26:13 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:13 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:13 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:15 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:15 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:15 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:19 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:19 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:19 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:22 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:22 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:22 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:24 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:24 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:24 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:27 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:27 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:27 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:35 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:35 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:35 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:38 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:38 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:38 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:38 UTC] PHP Warning:  Undefined array key "relDate" in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 353
+[09-Aug-2024 08:26:40 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:40 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:40 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:43 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:43 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:43 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:26:43 UTC] PHP Warning:  Undefined array key "relDate" in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 353
+[09-Aug-2024 08:29:10 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:29:10 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:29:10 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:29:19 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:29:19 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:29:19 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:29:25 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:29:25 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:29:25 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:29:36 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:29:36 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:29:36 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:30:12 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:30:12 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:30:12 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:30:27 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:30:27 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:30:27 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:30:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 08:30:27 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:30:27 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:30:27 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:30:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 08:33:44 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:33:44 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:33:44 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:33:50 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:33:50 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:33:50 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:33:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 08:33:50 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:33:50 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:33:50 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:33:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 08:33:55 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:33:55 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:33:55 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:33:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 08:33:55 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:33:55 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:33:55 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:33:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 08:36:48 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:36:48 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:36:48 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:36:56 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:36:56 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:36:56 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:38:22 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:38:22 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:38:22 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:38:30 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:38:30 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:38:30 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:38:51 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:38:51 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:38:51 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:38:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 08:38:51 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:38:51 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:38:51 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:38:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 08:43:27 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:43:27 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:43:27 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:43:41 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:43:41 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:43:41 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:43:46 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:43:46 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:43:46 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:43:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 08:43:46 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:43:46 UTC] PHP Warning:  include(C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:43:46 UTC] PHP Warning:  include(): Failed opening 'C:/xampp/htdocs/RORIRI_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:43:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 08:51:44 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 08:51:44 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 08:51:44 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 08:51:44 UTC] PHP Warning:  Undefined variable $conn in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 14
+[09-Aug-2024 08:51:44 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php:14
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php(14): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 14
+[09-Aug-2024 08:52:18 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 08:52:18 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 08:52:18 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 08:55:09 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 08:55:09 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 08:55:09 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 08:55:15 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:55:15 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:55:15 UTC] PHP Warning:  include(): Failed opening 'Roriri_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:55:18 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:55:18 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:55:18 UTC] PHP Warning:  include(): Failed opening 'Roriri_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:55:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 08:55:18 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:55:18 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:55:18 UTC] PHP Warning:  include(): Failed opening 'Roriri_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:55:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 08:55:39 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:55:39 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:55:39 UTC] PHP Warning:  include(): Failed opening 'Roriri_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:55:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 08:55:39 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:55:39 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:55:39 UTC] PHP Warning:  include(): Failed opening 'Roriri_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:55:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 08:57:53 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:57:53 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:57:53 UTC] PHP Warning:  include(): Failed opening 'Roriri_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:57:55 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:57:55 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:57:55 UTC] PHP Warning:  include(): Failed opening 'Roriri_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:57:59 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:57:59 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:57:59 UTC] PHP Warning:  include(): Failed opening 'Roriri_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:57:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 08:57:59 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:57:59 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:57:59 UTC] PHP Warning:  include(): Failed opening 'Roriri_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:57:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 08:58:04 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:58:04 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:58:04 UTC] PHP Warning:  include(): Failed opening 'Roriri_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:58:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 08:58:04 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:58:04 UTC] PHP Warning:  include(Roriri_ERP/assets/function/function.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:58:04 UTC] PHP Warning:  include(): Failed opening 'Roriri_ERP/assets/function/function.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 7
+[09-Aug-2024 08:58:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:141
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 141
+[09-Aug-2024 09:00:34 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 09:00:34 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 09:00:34 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 09:00:34 UTC] PHP Warning:  Undefined variable $conn in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 14
+[09-Aug-2024 09:00:34 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php:14
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php(14): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 14
+[09-Aug-2024 09:12:52 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 09:12:52 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 09:12:52 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 09:12:52 UTC] PHP Warning:  Undefined variable $conn in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 14
+[09-Aug-2024 09:12:52 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php:14
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php(14): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 14
+[09-Aug-2024 09:13:01 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 09:13:01 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 09:13:01 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 5
+[09-Aug-2024 09:13:01 UTC] PHP Warning:  Undefined variable $conn in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 14
+[09-Aug-2024 09:13:01 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php:14
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php(14): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/checkEmployee.php on line 14
+[09-Aug-2024 09:35:21 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 2
+[09-Aug-2024 09:35:21 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 2
+[09-Aug-2024 09:35:21 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 2
+[09-Aug-2024 09:35:21 UTC] PHP Warning:  Undefined variable $conn in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 126
+[09-Aug-2024 09:35:21 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php:126
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php(126): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 126
+[09-Aug-2024 09:37:16 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 2
+[09-Aug-2024 09:37:16 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 2
+[09-Aug-2024 09:37:16 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 2
+[09-Aug-2024 09:37:16 UTC] PHP Warning:  Undefined variable $conn in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 126
+[09-Aug-2024 09:37:16 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php:126
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php(126): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 126
+[09-Aug-2024 09:42:19 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php on line 3
+[09-Aug-2024 09:42:19 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php on line 3
+[09-Aug-2024 09:42:19 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php on line 3
+[09-Aug-2024 09:42:19 UTC] PHP Warning:  Undefined variable $conn in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php on line 45
+[09-Aug-2024 09:42:19 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php:45
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php(45): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php on line 45
+[09-Aug-2024 09:42:23 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php on line 3
+[09-Aug-2024 09:42:23 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php on line 3
+[09-Aug-2024 09:42:23 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php on line 3
+[09-Aug-2024 09:42:23 UTC] PHP Warning:  Undefined variable $conn in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php on line 120
+[09-Aug-2024 09:42:23 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php:120
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php(120): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php on line 120
+[09-Aug-2024 09:42:31 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php on line 3
+[09-Aug-2024 09:42:31 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php on line 3
+[09-Aug-2024 09:42:31 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php on line 3
+[09-Aug-2024 09:42:31 UTC] PHP Warning:  Undefined variable $conn in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php on line 120
+[09-Aug-2024 09:42:31 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php:120
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php(120): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actPayment.php on line 120
+[09-Aug-2024 09:44:49 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 2
+[09-Aug-2024 09:44:49 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 2
+[09-Aug-2024 09:44:49 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 2
+[09-Aug-2024 09:44:49 UTC] PHP Warning:  Undefined variable $conn in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 106
+[09-Aug-2024 09:44:49 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php:106
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php(106): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 106
+[09-Aug-2024 09:44:59 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 2
+[09-Aug-2024 09:44:59 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 2
+[09-Aug-2024 09:44:59 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 2
+[09-Aug-2024 09:44:59 UTC] PHP Warning:  Undefined variable $conn in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 106
+[09-Aug-2024 09:44:59 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php:106
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php(106): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 106
+[09-Aug-2024 09:46:21 UTC] PHP Warning:  Undefined array key "serviceE" in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actProject.php on line 60
+[12-Aug-2024 07:33:08 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 07:33:08 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 07:33:08 UTC] PHP Warning:  include(): Failed opening '../../qr/phpqrcode-master/qrlib.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 07:33:08 UTC] PHP Fatal error:  Uncaught Error: Class "QRcode" not found in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 76
+[12-Aug-2024 07:33:23 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 07:33:23 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 07:33:23 UTC] PHP Warning:  include(): Failed opening '../../qr/phpqrcode-master/qrlib.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 07:33:23 UTC] PHP Fatal error:  Uncaught Error: Class "QRcode" not found in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 76
+[12-Aug-2024 07:33:53 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 07:33:53 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 07:33:53 UTC] PHP Warning:  include(): Failed opening '../../qr/phpqrcode-master/qrlib.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 07:33:53 UTC] PHP Fatal error:  Uncaught Error: Class "QRcode" not found in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 76
+[12-Aug-2024 07:34:10 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 07:34:10 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 07:34:10 UTC] PHP Warning:  include(): Failed opening '../../qr/phpqrcode-master/qrlib.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 07:34:10 UTC] PHP Fatal error:  Uncaught Error: Class "QRcode" not found in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 76
+[12-Aug-2024 08:26:06 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 08:26:06 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 08:26:06 UTC] PHP Warning:  include(): Failed opening '../../qr/phpqrcode-master/qrlib.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 08:26:06 UTC] PHP Fatal error:  Uncaught Error: Class "QRcode" not found in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 76
+[12-Aug-2024 08:32:56 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 08:32:56 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 08:32:56 UTC] PHP Warning:  include(): Failed opening '../../qr/phpqrcode-master/qrlib.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 08:32:56 UTC] PHP Fatal error:  Uncaught Error: Class "QRcode" not found in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 76
+[12-Aug-2024 08:35:38 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 08:35:38 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 08:35:38 UTC] PHP Warning:  include(): Failed opening '../../qr/phpqrcode-master/qrlib.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 08:35:38 UTC] PHP Fatal error:  Uncaught Error: Class "QRcode" not found in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 76
+[12-Aug-2024 08:53:00 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 08:53:00 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 08:53:00 UTC] PHP Warning:  include(): Failed opening '../../qr/phpqrcode-master/qrlib.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 08:53:00 UTC] PHP Fatal error:  Uncaught Error: Class "QRcode" not found in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:75
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 75
+[12-Aug-2024 08:55:07 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 08:55:07 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 08:55:07 UTC] PHP Warning:  include(): Failed opening '../../qr/phpqrcode-master/qrlib.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 08:55:07 UTC] PHP Fatal error:  Uncaught Error: Class "QRcode" not found in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:75
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 75
+[12-Aug-2024 09:02:57 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 09:02:57 UTC] PHP Warning:  include(../../qr/phpqrcode-master/qrlib.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 09:02:57 UTC] PHP Warning:  include(): Failed opening '../../qr/phpqrcode-master/qrlib.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 6
+[12-Aug-2024 09:02:57 UTC] PHP Fatal error:  Uncaught Error: Class "QRcode" not found in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php:75
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 75
+[12-Aug-2024 09:35:11 UTC] PHP Warning:  Undefined array key "relDate" in /home/gbgt6pq2zieu/public_html/inforiya/Roriri_ERP/RoririSoftware/action/actEmployee.php on line 355
+[14-Aug-2024 06:38:34 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'RORIRI Software Solutions',
+    `client_location`='Nallanathan puram Kalakad'...' at line 3 in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actClient.php:51
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actClient.php(51): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actClient.php on line 51
+[14-Aug-2024 06:38:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'RORIRI Software Solutions',
+    `client_location`='Nallanathan puram Kalakad'...' at line 3 in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actClient.php:51
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actClient.php(51): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actClient.php on line 51
+[14-Aug-2024 06:38:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'RORIRI Software Solutions',
+    `client_location`='Nallanathan puram Kalakad'...' at line 3 in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actClient.php:51
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actClient.php(51): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actClient.php on line 51
+[14-Aug-2024 06:40:32 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's Hr Sec School',
+    `client_location`='Tirunelveli',
+    `client_email`='je...' at line 4 in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actClient.php:51
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actClient.php(51): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actClient.php on line 51
+[16-Aug-2024 09:12:55 UTC] PHP Warning:  Undefined array key "bank" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 124
+[16-Aug-2024 09:12:55 UTC] PHP Warning:  Undefined array key "pan" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 125
+[16-Aug-2024 09:12:55 UTC] PHP Warning:  Undefined array key "aadhar" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 126
+[16-Aug-2024 09:13:06 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'aadhar' in 'field list' in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php:92
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php(92): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 92
+[16-Aug-2024 09:13:13 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'aadhar' in 'field list' in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php:92
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php(92): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 92
+[16-Aug-2024 09:14:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'aadhar' in 'field list' in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php:92
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php(92): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 92
+[16-Aug-2024 09:14:59 UTC] PHP Warning:  Undefined array key "bank" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 124
+[16-Aug-2024 09:14:59 UTC] PHP Warning:  Undefined array key "pan" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 125
+[16-Aug-2024 09:14:59 UTC] PHP Warning:  Undefined array key "aadhar" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 126
+[16-Aug-2024 09:15:13 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'aadhar' in 'field list' in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php:92
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php(92): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 92
+[16-Aug-2024 09:17:27 UTC] PHP Warning:  Undefined array key "bank" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 126
+[16-Aug-2024 09:17:27 UTC] PHP Warning:  Undefined array key "pan" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 127
+[16-Aug-2024 09:17:27 UTC] PHP Warning:  Undefined array key "aadhar" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 128
+[16-Aug-2024 09:17:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'aadhar' in 'field list' in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php:94
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php(94): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 94
+[16-Aug-2024 15:18:11 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 2
+[16-Aug-2024 15:18:11 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 2
+[16-Aug-2024 15:18:11 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 2
+[16-Aug-2024 15:18:27 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 2
+[16-Aug-2024 15:18:27 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 2
+[16-Aug-2024 15:18:27 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 2
+[16-Aug-2024 15:18:27 UTC] PHP Warning:  Undefined variable $conn in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 31
+[16-Aug-2024 15:18:27 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 31
+[16-Aug-2024 15:18:35 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 2
+[16-Aug-2024 15:18:35 UTC] PHP Warning:  include(C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 2
+[16-Aug-2024 15:18:35 UTC] PHP Warning:  include(): Failed opening 'C:\xampp\htdocs\RORIRI_ERP\db\dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 2
+[16-Aug-2024 15:18:35 UTC] PHP Warning:  Undefined variable $conn in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 31
+[16-Aug-2024 15:18:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 31
+[16-Aug-2024 15:20:09 UTC] PHP Warning:  include(../db/dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 3
+[16-Aug-2024 15:20:09 UTC] PHP Warning:  include(../db/dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 3
+[16-Aug-2024 15:20:09 UTC] PHP Warning:  include(): Failed opening '../db/dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 3
+[16-Aug-2024 15:20:09 UTC] PHP Warning:  Undefined variable $conn in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 33
+[16-Aug-2024 15:20:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php:33
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 33
+[16-Aug-2024 15:20:16 UTC] PHP Warning:  include(../db/dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 3
+[16-Aug-2024 15:20:16 UTC] PHP Warning:  include(../db/dbConnection.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 3
+[16-Aug-2024 15:20:16 UTC] PHP Warning:  include(): Failed opening '../db/dbConnection.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 3
+[16-Aug-2024 15:20:16 UTC] PHP Warning:  Undefined variable $conn in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 33
+[16-Aug-2024 15:20:16 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php:33
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEnquire.php on line 33
+[17-Aug-2024 06:10:11 UTC] PHP Warning:  Undefined array key "bank" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 131
+[17-Aug-2024 06:10:11 UTC] PHP Warning:  Undefined array key "pan" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 132
+[17-Aug-2024 06:10:11 UTC] PHP Warning:  Undefined array key "aadhar" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 133
+[17-Aug-2024 06:10:12 UTC] PHP Warning:  Undefined array key "bank" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 131
+[17-Aug-2024 06:10:12 UTC] PHP Warning:  Undefined array key "pan" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 132
+[17-Aug-2024 06:10:12 UTC] PHP Warning:  Undefined array key "aadhar" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 133
+[17-Aug-2024 06:10:18 UTC] PHP Warning:  Undefined array key "bank" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 131
+[17-Aug-2024 06:10:18 UTC] PHP Warning:  Undefined array key "pan" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 132
+[17-Aug-2024 06:10:18 UTC] PHP Warning:  Undefined array key "aadhar" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 133
+[17-Aug-2024 06:11:56 UTC] PHP Warning:  Undefined array key "bank" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 131
+[17-Aug-2024 06:11:56 UTC] PHP Warning:  Undefined array key "pan" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 132
+[17-Aug-2024 06:11:56 UTC] PHP Warning:  Undefined array key "aadhar" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 133
+[17-Aug-2024 06:11:59 UTC] PHP Warning:  Undefined array key "bank" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 131
+[17-Aug-2024 06:11:59 UTC] PHP Warning:  Undefined array key "pan" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 132
+[17-Aug-2024 06:11:59 UTC] PHP Warning:  Undefined array key "aadhar" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 133
+[17-Aug-2024 06:12:00 UTC] PHP Warning:  Undefined variable $aname in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 93
+[17-Aug-2024 06:12:00 UTC] PHP Warning:  Undefined variable $bname in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 93
+[17-Aug-2024 06:12:00 UTC] PHP Warning:  Undefined variable $pname in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 93
+[17-Aug-2024 06:12:00 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'aadhar' in 'field list' in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php:94
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php(94): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 94
+[17-Aug-2024 06:13:46 UTC] PHP Warning:  Undefined array key "bank" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 131
+[17-Aug-2024 06:13:46 UTC] PHP Warning:  Undefined array key "pan" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 132
+[17-Aug-2024 06:13:46 UTC] PHP Warning:  Undefined array key "aadhar" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 133
+[17-Aug-2024 06:13:47 UTC] PHP Warning:  Undefined variable $aname in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 93
+[17-Aug-2024 06:13:47 UTC] PHP Warning:  Undefined variable $bname in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 93
+[17-Aug-2024 06:13:47 UTC] PHP Warning:  Undefined variable $pname in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 93
+[17-Aug-2024 06:13:47 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'aadhar' in 'field list' in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php:94
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php(94): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 94
+[17-Aug-2024 06:23:00 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'db_Roriri_ERP.salary_tbl' doesn't exist in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEmployee.php:313
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEmployee.php(313): mysqli->query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEmployee.php on line 313
+[17-Aug-2024 06:23:04 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'db_Roriri_ERP.salary_tbl' doesn't exist in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEmployee.php:313
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEmployee.php(313): mysqli->query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEmployee.php on line 313
+[17-Aug-2024 06:34:32 UTC] PHP Warning:  Undefined array key "bank" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 131
+[17-Aug-2024 06:34:32 UTC] PHP Warning:  Undefined array key "pan" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 132
+[17-Aug-2024 06:34:32 UTC] PHP Warning:  Undefined array key "aadhar" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 133
+[17-Aug-2024 06:34:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'aadhar' in 'field list' in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php:94
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php(94): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 94
+[17-Aug-2024 06:34:49 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'aadhar' in 'field list' in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php:94
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php(94): mysqli_query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 94
+[17-Aug-2024 06:39:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'db_Roriri_ERP.salary_tbl' doesn't exist in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEmployee.php:313
+Stack trace:
+#0 /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEmployee.php(313): mysqli->query()
+#1 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEmployee.php on line 313
+[17-Aug-2024 06:46:54 UTC] PHP Warning:  include(function2.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 06:46:54 UTC] PHP Warning:  include(function2.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 06:46:54 UTC] PHP Warning:  include(): Failed opening 'function2.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 06:46:54 UTC] PHP Warning:  Undefined array key "bank" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 134
+[17-Aug-2024 06:46:54 UTC] PHP Warning:  Undefined array key "pan" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 135
+[17-Aug-2024 06:46:54 UTC] PHP Warning:  Undefined array key "aadhar" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 136
+[17-Aug-2024 06:47:10 UTC] PHP Warning:  include(function2.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 06:47:10 UTC] PHP Warning:  include(function2.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 06:47:10 UTC] PHP Warning:  include(): Failed opening 'function2.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 06:47:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 18
+[17-Aug-2024 06:47:14 UTC] PHP Warning:  include(function2.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 06:47:14 UTC] PHP Warning:  include(function2.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 06:47:14 UTC] PHP Warning:  include(): Failed opening 'function2.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 06:47:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 18
+[17-Aug-2024 07:10:25 UTC] PHP Warning:  include(function2.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 07:10:25 UTC] PHP Warning:  include(function2.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 07:10:25 UTC] PHP Warning:  include(): Failed opening 'function2.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 07:10:43 UTC] PHP Warning:  include(function2.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 07:10:43 UTC] PHP Warning:  include(function2.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 07:10:43 UTC] PHP Warning:  include(): Failed opening 'function2.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 07:10:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 18
+[17-Aug-2024 07:10:49 UTC] PHP Warning:  include(function2.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 07:10:49 UTC] PHP Warning:  include(function2.php): Failed to open stream: No such file or directory in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 07:10:49 UTC] PHP Warning:  include(): Failed opening 'function2.php' for inclusion (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 6
+[17-Aug-2024 07:10:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getUserIdFromAdmin() in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actDocuments.php on line 18
+[17-Aug-2024 11:11:16 UTC] PHP Warning:  Undefined array key "is_admin" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEmployee.php on line 79
+[19-Aug-2024 16:02:51 UTC] PHP Warning:  Undefined array key "is_admin" in /home/gbgt6pq2zieu/public_html/inforiya/ERP/RoririSoftware/action/actEmployee.php on line 79
