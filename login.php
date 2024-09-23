@@ -10,22 +10,22 @@ if (isset($_REQUEST['logout'])) {
     header("Location: login.php");
 }
 $error = "";
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+//     $username = $_POST['username'];
+//     $password = $_POST['password'];
 
-    // Get the current host
-    $host = $_SERVER['HTTP_HOST'];
+//     // Get the current host
+//     $host = $_SERVER['HTTP_HOST'];
 
-    // Define entity IDs based on host names
-    $entity_id = 0; // Default to 0 or any value you prefer
-    if ($host === 'trainee.nexgenitacademy.com') { 
-        $entity_id = 3; // Host A corresponds to entity ID 1
-    } elseif ($host === 'workforce.roririsoft.com') {
-        $entity_id = 1; // Host B corresponds to entity ID 2
-    } elseif ($host === 'erp.inforiya.in') {
-		$entity_id = ''; // Host B corresponds to entity ID 2
-	}// Add more host conditions if needed
+//     // Define entity IDs based on host names
+//     $entity_id = 0; // Default to 0 or any value you prefer
+//     if ($host === 'trainee.nexgenitacademy.com') { 
+//         $entity_id = 3; // Host A corresponds to entity ID 1
+//     } elseif ($host === 'workforce.roririsoft.com') {
+//         $entity_id = 1; // Host B corresponds to entity ID 2
+//     } elseif ($host === 'erp.inforiya.in') {
+// 		$entity_id = ''; // Host B corresponds to entity ID 2
+// 	}// Add more host conditions if needed
 
     // SQL query to fetch user details
     $sql = "SELECT basic_details.*, roles.*, additional_details.* 
@@ -113,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: login.php");
         exit();
     }
-}
+// }
 
 ?>
 
