@@ -23,7 +23,7 @@ $is_admin = isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === 'True';
 								<a class="nav-link dark-mode-icon" href="javascript:;"><i class='bx bx-moon'></i>
 								</a>
 							</li>
-							<?php if ($is_admin): ?>
+							
 								<!-- Admin-specific dropdown menu -->
 							<!-- <li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown" href="javascript:;"><i class="fadeIn animated bx bx-caret-down-square"></i></a>
@@ -99,7 +99,7 @@ $is_admin = isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === 'True';
 									<i class="bx bx-scan"></i> 
 								</a>
 							</li>
-							<?php endif; ?>
+							
 							
 							<li class="nav-item dropdown dropdown-large" style="display:none">
 								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" data-bs-toggle="dropdown"><span class="alert-count">7</span>
@@ -416,28 +416,14 @@ $is_admin = isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === 'True';
 							
 						</ul>
 					</div>
-					<?php 
-                    $username = $_SESSION['username'];
-                    $imagePathPng = $imageView . $username . ".png";
-                    
-                    // Checking if the file exists on a remote server
-                    $headers = @get_headers($imagePathPng);
-                    
-                    if($headers && strpos($headers[0], '200')) {
-                        // If the file exists, use the user image
-                        $userImage = $imagePathPng;
-                    } else {
-                        // If the file doesn't exist, use the default image
-                        $userImage = $default_image;
-                    }
-                    ?>
+					
 					 
 					<div class="user-box dropdown px-3">
 						<a class="d-flex align-items-center nav-link dropdown-toggle gap-3 dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							<img src="<?php echo $userImage; ?>" class="user-img" alt="user avatar">
 							<div class="user-info">
-								 <p class="user-name mb-0"><?php   echo $_SESSION['name'];  ?></p>
-								<p class="designattion mb-0"><?php  echo $_SESSION['role_name'];  ?></p> 
+								 <p class="user-name mb-0"><?php   echo "User Name"  ?></p>
+								<p class="designattion mb-0"><?php  echo "Admin"  ?></p> 
 							</div>
 						</a>
 						<ul class="dropdown-menu dropdown-menu-end">
