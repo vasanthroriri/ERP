@@ -73,12 +73,12 @@
                 </a>
             </li>
            
-            <li >
+            <!-- <li >
                 <a href="https://treasurehunt.roririsoft.com/">
                 <div class="parent-icon"><i class="lni lni-bulb me-2"></i></div>
                     <div class="menu-title">Treasure Hunt</div>
                 </a>
-            </li>
+            </li> -->
 
             <li >
                 <a href="internship.php">
@@ -87,12 +87,12 @@
                 </a>
             </li>
 
-            <li >
-                <a href="../RoririSoftware/employeeDetails.php?id=<?php echo $_SESSION['id']; ?>">
+            <!-- <li >
+                <a href="../RoririSoftware/employeeDetails.php?id=<?php ?>">
                 <div class="parent-icon"><i class="lni lni-user"></i></div>
                     <div class="menu-title">Profile</div>
                 </a>
-            </li>
+            </li> -->
 
 
             <li >
@@ -102,7 +102,7 @@
                 </a>
             </li>
 
-            <li >
+            <!-- <li >
                 <a href="../RoririSoftware/coordinator.php">
                 <div class="parent-icon"><i class="lni lni-crown me-2"></i></div>
                     <div class="menu-title">Coordinator</div>
@@ -122,6 +122,6 @@
                 <div class="parent-icon"><i class="lni lni-star me-2"></i></div>
                     <div class="menu-title">Internship</div>
                 </a>
-            </li>
+            </li> -->
     </ul>
 </div>

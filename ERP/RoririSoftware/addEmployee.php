@@ -71,15 +71,8 @@
 										<label for="input19" class="form-label">Role <span class="text-danger">*</span></label>
 										<select id="role" name="role" class="form-select" required="required">
 											<option selected value="">Choose...</option>
-											<?php $sel_role="SELECT * FROM roles WHERE status='Active'";
-                                            $res_role = mysqli_query($conn , $sel_role); 
-                                            while($row = mysqli_fetch_array($res_role , MYSQLI_ASSOC)) { 
-                                               $position_id = $row['role_id'];
-                                               $position_name = $row['role_name'];
-                                               
-                                              
-                                               echo '<option value="' . $position_id . '">' . $position_name . '</option>';
-                                            } ?>
+											<option value="1">Developer</option>
+											<option value="2">Designer</option>
 										</select>
 										<div id="roleError" class="error-message text-danger" style="display: none;">Role is required.</div>
 									</div>

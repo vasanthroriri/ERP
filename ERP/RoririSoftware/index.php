@@ -31,7 +31,7 @@ include("../url.php");
 										</h4>
 										<!-- <p class="mb-0 font-13 text-success"><i class="bx bxs-up-arrow align-middle"></i>$34 from last week</p> -->
 									</div>
-									<div class="widgets-icons bg-light-success text-success ms-auto"><i class="bx bxs-wallet"></i>
+									<div class="widgets-icons bg-light-success text-success ms-auto"><i class="bx bxs-id-card"></i>
 									</div>
 								</div>
 							</div>
@@ -48,7 +48,7 @@ include("../url.php");
 										</h4>
 										<!-- <p class="mb-0 font-13 text-success"><i class='bx bxs-up-arrow align-middle'></i>$24 from last week</p> -->
 									</div>
-									<div class="widgets-icons bg-light-info text-info ms-auto"><i class='bx bxs-group'></i>
+									<div class="widgets-icons bg-light-info text-info ms-auto"><i class='bx bxs-user'></i>
 									</div>
 								</div>
 							</div>
@@ -65,7 +65,7 @@ include("../url.php");
 										</h4>
 										<!-- <p class="mb-0 font-13 text-danger"><i class='bx bxs-down-arrow align-middle'></i>$34 from last week</p> -->
 									</div>
-									<div class="widgets-icons bg-light-danger text-danger ms-auto"><i class='bx bxs-binoculars'></i>
+									<div class="widgets-icons bg-light-danger text-danger ms-auto"><i class='bx bxs-briefcase'></i>
 									</div>
 								</div>
 							</div>
@@ -82,7 +82,7 @@ include("../url.php");
 										</h4>
 										<!-- <p class="mb-0 font-13 text-danger"><i class='bx bxs-down-arrow align-middle'></i>12.2% from last week</p> -->
 									</div>
-									<div class="widgets-icons bg-light-warning text-warning ms-auto"><i class='bx bx-line-chart-down'></i>
+									<div class="widgets-icons bg-light-warning text-warning ms-auto"><i class='bx bx-question-mark'></i>
 									</div>
 								</div>
 							</div>
