@@ -1,18 +1,7 @@
  <?php
 session_start();
-
-include("../db/dbConnection.php");
 include("../url.php");    
-   $selQuery = "SELECT a.*, b.*,c.*
-        FROM basic_details AS b
-        LEFT JOIN additional_details AS a ON a.basic_id=b.id
-        LEFT JOIN emp_additional_details AS c ON c.basic_id=b.id 
-        WHERE a.entity_id=1 AND b.status='Active' AND a.add_status='Active'
-        ORDER BY 
-        b.id DESC";
-    
-    $resQuery = mysqli_query($conn , $selQuery); 
-    
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -38,8 +27,10 @@ include("../url.php");
 			<?php include("top.php");?>
 		<!--end header -->
 		<!--start page wrapper -->
-        <?php include("addEmployee.php");
-        include("editEmployee.php");?>
+		<?php
+		 include "addEmployee.php";
+		 include "editEmployee.php";
+		?>
 		
 		<div class="page-wrapper">
 			<div class="page-content">
@@ -67,34 +58,18 @@ include("../url.php");
 										<th>Name</th>
                                         <th>ID</th>
                                         <th>Phone</th>
-										<!-- <th>Project</th> -->
 										<th>Email</th>
 										<th>Action</th>
 										
 									</tr>
 								</thead>
 								<tbody>
-                                <?php $i=1; while($row = mysqli_fetch_array($resQuery , MYSQLI_ASSOC)) { 
-                           
-                                        $emp_id  = $row['id'];  
-                                        $emp_name=$row['name'];   
-                                       // $proName  = $row['project_name'];  
-                                        $email   = $row['email'];  
-                                        $phone          = $row['phone'];
-                                        $address        = $row['address'];   
-                                        $username=$row['username'];
-                                        $password=$row['password'];
-                                        $reg_no=$row['reg_no'];
-                                      
-                                
-                      ?>
                       <tr>
-                       <td><?php echo $i; $i++; ?></td>
-                      <td><?php echo $emp_name; ?></td>
-                      <td><?php echo $reg_no; ?></td>
-                      <td><?php echo $phone; ?></td>
-                      <!-- <td><?php echo $proName; ?></td> -->
-                      <td><?php echo $email; ?></td>
+                       <td>1</td>
+                      <td>Rajkumar</td>
+                      <td>17001</td>
+                      <td>9874563210</td>
+                      <td>employee@roririsoft.com</td>
                       
                       <td>
                           <button class="btn btn-sm btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="top" title="View" onclick="goViewEmp(<?php echo $emp_id; ?>);" ><i class="lni lni-eye"></i></button>
@@ -105,18 +80,7 @@ include("../url.php");
                           
                       </td>
                     </tr>
-                    <?php } ?>   
 								</tbody>
-								<!-- <tfoot>
-									<tr>
-                                    <th>S. No</th>
-										<th>Name</th>
-										<th>Mobile</th>
-										<th>Email</th>
-										<th>Role</th>
-										<th>Action</th>
-									</tr>
-								</tfoot> -->
 							</table>
 						</div>
 					</div>
@@ -164,115 +128,6 @@ include("../url.php");
             })
         });
     </script>
-    <script>
-        function goViewEmp(id){
-            
-            location.href = "employeeDetails.php?id="+id;
-
-        }
-        function goEditEmp(id) 
-  
-  {
-    $.ajax({
-        url: 'action/actEmployee.php',
-        method: 'POST',
-        data: {
-            empId: id
-        },
-        dataType: 'json', // Specify the expected data type as JSON
-        success: function(response) {
-			
-
-          $('#empId').val(response.emp_id);
-          $('#editFname').val(response.first_name);
-          $('#editLname').val(response.last_name);
-          $('#editPhone').val(response.phone);
-          $('#editPemail').val(response.personal_email);
-          $('#editCemail').val(response.company_email);
-          $('#editDob').val(response.dob);
-          $('#editAddress').val(response.address);
-          $('#editjDate').val(response.joining_date);
-          $('#editRole').val(response.role);
-          $('#editms').val(response.married_status);
-		  $('#editGender').val(response.gender);
-		  
-		  // Display the image if the URL is provided
-          if (response.img) {
-            console.log('Image URL:', response.img); // Debugging line
-                $('#editEmpImg').attr('src', response.img).show();
-                
-            } else {
-                $('#editEmpImg').hide();
-            }
-   
-        },
-        error: function(xhr, status, error) {
-            // Handle errors here
-            console.error('AJAX request failed:', status, error);
-        }
-    });
-}
-function goDeleteEmployee(id)
-{
-    //alert(id);
-    if(confirm("Are you sure you want to delete Employee?"))
-    {
-      $.ajax({
-        url: 'action/actEmployee.php',
-        method: 'POST',
-        data: {
-          deleteId: id
-        },
-        //dataType: 'json', // Specify the expected data type as JSON
-        success: function(response) {
-          $('#example2').load(location.href + ' #example2 > *', function() {
-                               
-            if ($.fn.DataTable.isDataTable('#example2')) {
-                $('#example2').DataTable().destroy();
-            }
-            var table = $('#example2').DataTable({
-            "paging": true,
-            "ordering": true,
-            "searching": true,
-            lengthChange: false,
-            buttons: ['copy', 'excel', 'pdf', 'print']
-            });
-
-            table.buttons().container()
-            .appendTo('#example2_wrapper .col-md-6:eq(0)');
-            });
-            
-         // Show SweetAlert based on the response
-         if (response.success) {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Deleted',
-                        text: response.message,
-                        timer: 2000
-                    });
-                } else {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: response.message
-                    });
-                }
-
-        },
-        error: function(xhr, status, error) {
-            // Handle errors here
-            console.error('AJAX request failed:', status, error);
-        }
-    });
-    }
-}
-//Data Table script 
-    </script>
-	<script>
-		$(document).ready(function() {
-			$('#example').DataTable();
-		  } );
-	</script>
 	<script>
 		$(document).ready(function() {
 			var table = $('#example2').DataTable( {
@@ -284,232 +139,6 @@ function goDeleteEmployee(id)
 				.appendTo( '#example2_wrapper .col-md-6:eq(0)' );
 		} );
 </script>
-
-    <!--Handles the Ajax call-->
-<!-- JavaScript for Client-Side Validation and AJAX Submission -->
-<script>
-$(document).ready(function () {
-     
-
-    $('#submitBtn').click(function (e) {
-        e.preventDefault();
-        console.log('Submit button clicked'); // Debugging line
-        var isValid = true;
-
-        // Validate fields
-        isValid &= validateName('fname', 'fnameError');
-        isValid &= validateDOB('dob', 'dobError');
-        isValid &= validateField('gender', 'genderError');
-        isValid &= validatePhoneNumber('phone', 'phoneError');
-        isValid &= validateEmail('pemail', 'emailError');
-        isValid &= validateField('role', 'roleError');
-        isValid &= validateJoiningDate('jDate', 'jDateError');
-        isValid &= validateField('address', 'addressError');
-        isValid &= validateField('ms', 'msError');
-        isValid &= optionalEmail('cemail', 'cemailError');
-
-        if (isValid) {
-            var phone = $('#phone').val().trim();
-            var pemail = $('#pemail').val().trim();
-
-            // AJAX request to check for existing records
-            $.ajax({
-                url: "action/checkEmployee.php", // Your URL to check phone and email
-                method: 'POST',
-                data: { phone: phone, pemail: pemail },
-                dataType: 'json',
-                success: function(response) {
-                    if (!response.success) {
-                        if (response.phoneExists) {
-                            $('#phoneError').text("Phone number already exists").show();
-                        }
-                        if (response.emailExists) {
-                            $('#emailError').text("Email already exists").show();
-                        }
-                    } else {
-                        // Submit the form if valid
-                        submitForm();
-                    }
-                },
-                error: function(xhr, status, error) {
-                    console.error(xhr.responseText);
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: 'An error occurred while checking phone and email.'
-                    });
-                }
-            });
-        }
-    });
-
-    function submitForm() {
-        var formData = new FormData($('#addEmployee')[0]);
-        $.ajax({
-            url: "action/actEmployee.php",
-            method: 'POST',
-            data: formData,
-            contentType: false,
-            processData: false,
-            dataType: 'json', // Ensure you expect a JSON response
-            success: function(response) {
-                if (response.success) {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Success',
-                        text: response.message,
-                        timer: 2000
-                    }).then(function() {
-                        $('#addEmployeeModal').modal('hide');
-                        $('.modal-backdrop').remove();
-                        setTimeout(function() {
-                            $('#example2').load(location.href + ' #example2 > *', function() {
-                                if ($.fn.DataTable.isDataTable('#example2')) {
-                                    $('#example2').DataTable().destroy();
-                                }
-                                var table = $('#example2').DataTable({
-                                    "paging": true,
-                                    "ordering": true,
-                                    "searching": true,
-                                    lengthChange: false,
-                                    buttons: ['copy', 'excel', 'pdf', 'print']
-                                });
-                                table.buttons().container()
-                                    .appendTo('#example2_wrapper .col-md-6:eq(0)');
-                            });
-                        }, 300);
-                        // Reset the form after successful submission
-                        resetForm('addEmployee');
-                    });
-                } else {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: response.message
-                    });
-                }
-            },
-            error: function(xhr, status, error) {
-                console.error(xhr.responseText);
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Error',
-                    text: 'An error occurred while adding Employee data.'
-                });
-                $('#submitBtn').prop('disabled', false);
-            }
-        });
-    }
-
-    // Reset the form when the close button is clicked
-    $('#modalCloseBtn').click(function () {
-        resetForm('addEmployee');
-    });
-
-    function resetForm(formId) {
-        $('#' + formId)[0].reset(); // Reset the form using jQuery
-        // Hide all error messages
-        $('.error-message').hide();
-        $('#dobError').hide(); // Ensure DOB error message is hidden specifically
-    }
-});
-
-</script>
-<script>
-
-//--------------Handles edit student -----------------------------//
-
-document.addEventListener('DOMContentLoaded', function() {
-    var today = new Date().toISOString().split('T')[0];
-    $('#editjDate').attr('max', today);
-$('#updateBtn').click(function(e) {
-        e.preventDefault();
-        var isValid = true;
-        // Validate fields
-       
-        // Validate fields
-        isValid &= validateName('editFname', 'fnameErrorE');
-        isValid &= validateDOB('editDob', 'dobErrorE');
-        isValid &= validateField('editGender', 'genderErrorE');
-        isValid &= validatePhoneNumber('editPhone', 'phoneErrorE');
-        isValid &= validateEmail('editPemail', 'pemailErrorE');
-        isValid &= validateField('editRole', 'roleErrorE');
-        isValid &= validateField('editAddress', 'addressErrorE');
-        isValid &= validateField('editms', 'msErrorE');
-        isValid &= optionalEmail('editCemail', 'cemailErrorE');
-
-        if (isValid) {
-                        $('#editEmployee').trigger('submit'); // Manually trigger the form submit event if validation passes
-                    }
-                });
-
-                // Handle the form submission via AJAX
-                $('#editEmployee').off('submit').on('submit', function (e) {
-                    e.preventDefault(); // Prevent normal form submission
-
-                    var formData = new FormData(this);
-                    $.ajax({
-                        url: "action/actEmployee.php",
-                        method: 'POST',
-                        data: formData,
-                        contentType: false,
-                        processData: false,
-                        dataType: 'json', // Expect JSON response
-                        success: function (response) {
-                            if (response.success) {
-                                Swal.fire({
-                                    icon: 'success',
-                                    title: 'Updated',
-                                    text: response.message,
-                                    timer: 2000
-                                }).then(function () {
-                                    $('#editEmployeeModal').modal('hide'); // Close the modal
-                                    $('.modal-backdrop').remove(); // Remove the backdrop
-                                    setTimeout(function () {
-                                        $('#example2').load(location.href + ' #example2 > *', function () {
-                                            if ($.fn.DataTable.isDataTable('#example2')) {
-                                                $('#example2').DataTable().destroy();
-                                            }
-                                            var table = $('#example2').DataTable({
-                                                "paging": true,
-                                                "ordering": true,
-                                                "searching": true,
-                                                lengthChange: false,
-                                                buttons: ['copy', 'excel', 'pdf', 'print']
-                                            });
-                                            table.buttons().container()
-                                                .appendTo('#example2_wrapper .col-md-6:eq(0)');
-                                        });
-                                    }, 300);
-                                });
-
-                               
-                            } else {
-                                Swal.fire({
-                                    icon: 'error',
-                                    title: 'Error',
-                                    text: response.message
-                                });
-                            }
-                        },
-                        error: function (xhr, status, error) {
-                            console.error(xhr.responseText);
-                            Swal.fire({
-                                icon: 'error',
-                                title: 'Error',
-                                text: 'An error occurred while Editing Employee data.'
-                            });
-                        }
-                    });
-                });
-                $('#editCloseBtn').click(function () {
-                    hideErrorMessages(); // Call the function to hide error messages
-                });
-        });
-
-
-</script>
-
 	<!--app JS-->
 	<script src="<?php echo $app; ?>"></script>
 </body>

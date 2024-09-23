@@ -12,7 +12,6 @@
 								
 								<form class="row g-3" name="frmEditEmployee" id="editEmployee" enctype="multipart/form-data">
                                     <input type="hidden" name="hdnAction" value="hdneditEmployee">
-									<?php if ($_SESSION['is_admin'] == 'True'): ?>
                                     <input type="hidden" name="empId" id="empId">
 									
 									
@@ -71,14 +70,8 @@
 										<label for="input19" class="form-label">Role <span class="text-danger">*</span></label>
 										<select id="editRole" name="editRole" class="form-select" required="required">
 											<option selected value="">Choose...</option>
-											<?php $sel_role="SELECT * FROM roles WHERE status='Active'";
-                                            $res_role = mysqli_query($conn , $sel_role); 
-                                            while($row = mysqli_fetch_array($res_role , MYSQLI_ASSOC)) { 
-                                               $position_id = $row['role_id'];
-                                               $position_name = $row['role_name'];
-                                  
-                                               echo '<option value="' . $position_id . '">' . $position_name . '</option>';
-                                            } ?>
+											<option value="1">Developer</option>
+											<option value="2">Designer</option>
 										</select>
 										<div id="roleErrorE" class="error-message">This is required</div>
 									</div>
@@ -115,7 +108,6 @@
                                         <!-- Image preview -->
                         				<img id="editEmpImg" src="" alt="Employee Image" style="width: 100px; height: 100px; display: none;">		
 									</div>
-									<?php  else:  ?>
 										<input type="hidden" name="profileId" id="profileId">
 										<div class="col-md-6">
 											<label for="input13" class="form-label">UserName <span class="text-danger">*</span></label>
@@ -132,7 +124,6 @@
 											<span class="position-absolute top-50 translate-middle-y"><i class="bx bx-hide"></i></span>
 										</div>
 									</div>
-										<?php endif;  ?>
 									<div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                         <button type="submit" id="updateBtn" class="btn btn-primary">Save changes</button>
