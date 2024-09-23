@@ -13,13 +13,13 @@
 			</div>
 			<!--navigation-->
 			<ul class="metismenu" id="menu">
-				<li>
+				<!-- <li>
 					<a href="javascript:void(0);" id="dashboard-btn">
 						<div class="parent-icon"><i class="bx bx-category"></i>
 						</div>
 						<div class="menu-title">Dashboard</div>
 					</a>
-				</li>
+				</li> -->
 
 				<li class="menu-label">Elements</li>
 				<li>

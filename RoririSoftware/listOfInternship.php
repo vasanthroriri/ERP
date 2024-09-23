@@ -45,18 +45,20 @@ include("../url.php");
                 
 				
             <div class="page-title-box">
-                
-                <div class="page-title-right">
-                    <h2 class="page-title">Condidates</h2>
-                    <div class="col text-end pb-3">
-                    <button type="button" id="addCondidates" class="btn btn-primary px-5 radius-30" data-bs-toggle="modal" data-bs-target="#addClientModal">Add Candidates</button>
-                    </div>
-
+            <div class="row">
+                <div class="col">
+                    <h2 class="page-title">Candidates</h2>
                 </div>
-                   
+                <div class="col text-end pb-3">
+                    <!-- Add Candidates Button -->
+                    <button type="button" id="addCondidates" class="btn btn-primary px-4 radius-30" data-bs-toggle="modal" data-bs-target="#addClientModal"><i class="bx bx-plus"></i>Add</button>
+                    <!-- Back Button, initially hidden -->
+                    <button type="button" id="backBtnView" class="btn btn-danger px-5 radius-30" style="display: none;">Back</button>
+                </div>
             </div>
+        </div>
 
-				<div class="card">
+				<div class="card" id="condidateTable">
 					<div class="card-body">
 						<div class="table-responsive">
 							<table id="example2" class="table table-striped table-bordered">
@@ -105,12 +107,85 @@ include("../url.php");
 						</div>
 					</div>
 				</div>
+
+                <div class="container" id="nextDivId" style="display: none;">
+					<div class="main-body">
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex flex-column align-items-center text-center">
+											<img src="../assets/images/avatars/avatar-2.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+											<div class="mt-3">
+												<h4>John Doe</h4>
+												<p class="text-secondary mb-1">Full Stack Developer</p>
+												<p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
+												
+											</div>
+										</div>
+										<hr class="my-4" />
+										
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-8">
+								<div class="card">
+									<div class="card-body">
+										<div class="row mb-3">
+											<div class="col-sm-3">
+												<h6 class="mb-0">Full Name</h6>
+											</div>
+											<div class="col-sm-9 text-secondary">
+												<input type="text" class="form-control" value="John Doe" />
+											</div>
+										</div>
+										<div class="row mb-3">
+											<div class="col-sm-3">
+												<h6 class="mb-0">Email</h6>
+											</div>
+											<div class="col-sm-9 text-secondary">
+												<input type="text" class="form-control" value="john@example.com" />
+											</div>
+										</div>
+										<div class="row mb-3">
+											<div class="col-sm-3">
+												<h6 class="mb-0">Phone</h6>
+											</div>
+											<div class="col-sm-9 text-secondary">
+												<input type="text" class="form-control" value="(239) 816-9029" />
+											</div>
+										</div>
+										<div class="row mb-3">
+											<div class="col-sm-3">
+												<h6 class="mb-0">Mobile</h6>
+											</div>
+											<div class="col-sm-9 text-secondary">
+												<input type="text" class="form-control" value="(320) 380-4539" />
+											</div>
+										</div>
+										<div class="row mb-3">
+											<div class="col-sm-3">
+												<h6 class="mb-0">Address</h6>
+											</div>
+											<div class="col-sm-9 text-secondary">
+												<input type="text" class="form-control" value="Bay Area, San Francisco, CA" />
+											</div>
+										</div>
+										
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div><!--end page-content-->
 		</div>
 			
 		<!--end page wrapper -->
 		<!--start overlay-->
-		 <?php include("footer.php"); ?>
+		 <?php include "footer.php"; ?>
 	</div>
 	<!--end wrapper-->
 
@@ -192,7 +267,7 @@ include("../url.php");
             document.addEventListener('DOMContentLoaded', function () {
   var form = document.getElementById('editCandidatesForm');
   var saveButton = document.getElementById('editSaveCandidate');
-  var addCondidates = document.getElementById('editSaveCandidate');
+  
 
   // Handle form submission
   saveButton.addEventListener('click', function (event) {
@@ -236,11 +311,34 @@ include("../url.php");
 
     <script>
 
-        function goViewClient(id){
-            
-            location.href = "clientDetails.php?id="+id;
+        function goViewClient(client_id) {
+            // Hide Add Candidates button
+            document.getElementById("addCondidates").style.display = "none";
 
+            // Show Back button
+            document.getElementById("backBtnView").style.display = "inline-block";
+
+            // Hide candidate table and show detailed view (you can customize this part)
+            document.getElementById("condidateTable").style.display = "none";
+            document.getElementById("nextDivId").style.display = "block";
         }
+
+        // Back button click event
+        document.getElementById('backBtnView').addEventListener('click', function() {
+            // Show Add Candidates button
+            document.getElementById("addCondidates").style.display = "inline-block";
+
+            // Hide Back button
+            document.getElementById("backBtnView").style.display = "none";
+
+            // Show candidate table and hide detailed view (you can customize this part)
+            document.getElementById("condidateTable").style.display = "block";
+            document.getElementById("nextDivId").style.display = "none";
+        });
+
+
+
+
 function goEditClient(id) 
   
   {
@@ -326,11 +424,7 @@ function goDeleteClient(id)
 }
 //Data Table script 
     </script>
-	<script>
-		$(document).ready(function() {
-			$('#example').DataTable();
-		  } );
-	</script>
+	
 	<script>
 		$(document).ready(function() {
 			var table = $('#example2').DataTable( {
@@ -348,33 +442,13 @@ function goDeleteClient(id)
         $(document).ready(function () {
 
 
-                // Handle the form submission
-                $('#submitBtn').click(function (e) {
-                    e.preventDefault(); // Prevent default form submission
-
-                    var isValid = true;
-
-                    // Validate fields
-                    isValid &= validateName('Cname', 'nameError');
-                    isValid &= validateField('compName', 'companyError');
-                    isValid &= validatePhoneNumber('cPhone', 'phoneError');
-                    isValid &= validateEmail('cEmail', 'emailError');
-                   
-                    isValid &= validateField('cAddress', 'addressError');
-                    
-
-                    if (isValid) {
-                        $('#addClient').trigger('submit'); // Manually trigger the form submit event if validation passes
-                    }
-                });
-
                 // Handle the form submission via AJAX
-                $('#addClient').off('submit').on('submit', function (e) {
+                $('#candidatesForm').off('submit').on('submit', function (e) {
                     e.preventDefault(); // Prevent normal form submission
 
                     var formData = new FormData(this);
                     $.ajax({
-                        url: "action/actClient.php",
+                        url: "action/actCandidate.php",
                         method: 'POST',
                         data: formData,
                         contentType: false,
@@ -409,7 +483,7 @@ function goDeleteClient(id)
                                 });
 
                                 // Reset the form after successful submission
-                                resetForm('addClient');
+                                resetForm('candidatesForm');
                             } else {
                                 Swal.fire({
                                     icon: 'error',
@@ -430,8 +504,8 @@ function goDeleteClient(id)
                 });
 
                 // Reset the form when the close button is clicked
-                $('#modalCloseBtn').click(function () {
-                    resetForm('addClient');
+                $('#addCondidates').click(function () {
+                    resetForm('candidatesForm');
                 });
         });
 

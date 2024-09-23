@@ -318,6 +318,7 @@ function goDeleteClient(id)
                                     $('#addClientModal').modal('hide'); // Close the modal
                                     $('.modal-backdrop').remove(); // Remove the backdrop
                                     setTimeout(function () {
+
                                         $('#example2').load(location.href + ' #example2 > *', function () {
                                             if ($.fn.DataTable.isDataTable('#example2')) {
                                                 $('#example2').DataTable().destroy();
@@ -350,7 +351,7 @@ function goDeleteClient(id)
                             Swal.fire({
                                 icon: 'error',
                                 title: 'Error',
-                                text: 'An error occurred while adding Client data.'
+                                text: 'An error occurred while adding Candidate data.'
                             });
                         }
                     });
