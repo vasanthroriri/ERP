@@ -41,7 +41,7 @@ include("../url.php");
                 <div class="page-title-right">
                     <h2 class="page-title">Employee</h2>
                     <div class="position-relative" style="height: 80px;"> <!-- Adjust height as needed -->
-                    <button type="button" id="addEmployeeBtn" class="btn btn-primary position-absolute top-0 end-0" data-bs-toggle="modal" data-bs-target="#addEmployeeModal">Add New Employee</button>
+                    <button type="button" id="addEmployeeBtn" class="btn btn-primary position-absolute radius-20 top-0 end-0" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i class='bx bx-cloud-upload mr-1'></i>Add</button>
                     </div>
 
                 </div>

@@ -56,7 +56,7 @@ $resQuery = mysqli_query($conn , $selQuery);
                         <h2 class="page-title">Projects</h2>
                         <div class="position-relative" style="height: 80px;">
                             <!-- Adjust height as needed -->
-                            <button type="button" id="addProjectBtn" class="btn btn-primary position-absolute top-0 end-0" data-bs-toggle="modal" data-bs-target="#addProjectModal">Add Project</button>
+                            <button type="button" id="addProjectBtn" class="btn btn-primary radius-20 position-absolute top-0 end-0" data-bs-toggle="modal" data-bs-target="#addProjectModal"><i class='bx bx-cloud-upload mr-1'></i>Add</button>
                         </div>
                     </div>
                 </div>
