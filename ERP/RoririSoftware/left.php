@@ -12,11 +12,7 @@
 				</div>
 			</div>
     <!-- navigation -->
-    <ul class="metismenu" id="menu">
-        <?php 
-        if ($_SESSION['is_admin'] === 'True') {  // Check if the user is an admin
-        ?>
-                 
+    <ul class="metismenu" id="menu">  
             <li >
                 <a href="index.php">
                 <div class="parent-icon"><i class="lni lni-home me-2"></i></div>
@@ -90,12 +86,6 @@
                     <div class="menu-title">Internship</div>
                 </a>
             </li>
-             
-            
-            
-        <?php 
-        } else {  // If the user is not an admin
-        ?>
 
             <li >
                 <a href="../RoririSoftware/employeeDetails.php?id=<?php echo $_SESSION['id']; ?>">
@@ -133,11 +123,5 @@
                     <div class="menu-title">Internship</div>
                 </a>
             </li>
-			
-            
-             
-        <?php 
-        } 
-        ?>
     </ul>
 </div>
