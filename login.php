@@ -10,110 +10,14 @@ if (isset($_REQUEST['logout'])) {
     header("Location: login.php");
 }
 $error = "";
-// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-//     $username = $_POST['username'];
-//     $password = $_POST['password'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-//     // Get the current host
-//     $host = $_SERVER['HTTP_HOST'];
 
-//     // Define entity IDs based on host names
-//     $entity_id = 0; // Default to 0 or any value you prefer
-//     if ($host === 'trainee.nexgenitacademy.com') { 
-//         $entity_id = 3; // Host A corresponds to entity ID 1
-//     } elseif ($host === 'workforce.roririsoft.com') {
-//         $entity_id = 1; // Host B corresponds to entity ID 2
-//     } elseif ($host === 'erp.inforiya.in') {
-// 		$entity_id = ''; // Host B corresponds to entity ID 2
-// 	}// Add more host conditions if needed
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+	header('Location: index.php');
 
-    // SQL query to fetch user details
-    $sql = "SELECT basic_details.*, roles.*, additional_details.* 
-            FROM basic_details 
-            LEFT JOIN additional_details ON additional_details.basic_id = basic_details.id 
-            LEFT JOIN roles ON roles.role_id = additional_details.role 
-            WHERE basic_details.username = '$username' 
-            AND basic_details.password = '$password'"; 
-    
-    if($entity_id != '') {
-        $sql .= " AND additional_details.entity_id = '$entity_id'"; // Apply entity ID filter
-    }
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $user = $row['username'];
-        $role_name = $row['role_name'];
-        $role = $row['role'];
-        $entity_id = $row['entity_id'];
-        $is_admin = $row['is_admin']; 
-        $userId = $row['id'];
-        $course_id_1 = $row['course_id'];
-        $name = $row['name'];
-
-        // Set session variables
-        $_SESSION['role'] = $role;
-        $_SESSION['username'] = $user;
-        $_SESSION['role_name'] = $role_name;
-        $_SESSION['id'] = $userId;
-        $_SESSION['entity_id'] = $entity_id;
-        $_SESSION['is_admin'] = $is_admin;
-        $_SESSION['name'] = $name;
-        $_SESSION['course_id_1'] = $course_id_1;
-
-        if ($is_admin === 'True') {
-            $sqlAdmin = "SELECT role FROM `admin_tbl` WHERE `id` = '$userId'";
-            $resAdmin = $conn->query($sqlAdmin);
-            $rowAdmin = $resAdmin->fetch_assoc();
-            $_SESSION['role_name'] = $rowAdmin['role'];
-            header('Location: index.php');
-        } elseif ($entity_id == 1) { 
-            // Employee
-            $sqlEmp = "SELECT * FROM `basic_details` 
-            INNER JOIN `additional_details` ON `additional_details`.`basic_id` = `basic_details`.`id` 
-            WHERE `basic_details`.`id` = '$userId'";
-        
-            $resEmp = $conn->query($sqlEmp);
-        
-            if ($resEmp->num_rows > 0) {
-                $rowEmp = $resEmp->fetch_assoc();
-                $_SESSION['image'] = $rowEmp['image'];
-                header('Location: RoririSoftware/employeeDetails.php?id=' .  $userId);
-                exit; 
-            }
-        } elseif ($entity_id == 2) { 
-            // Student
-            $sqlStu = "SELECT * FROM `basic_details` 
-            INNER JOIN `additional_details` ON `additional_details`.`basic_id` = `basic_details`.`id` 
-            WHERE `basic_details`.`id` = '$userId'";
-            $resStudent = $conn->query($sqlStu);
-            if ($resStudent->num_rows > 0) {
-                header('Location:NexGen_IT_College/studentDetail.php?id=' . $userId);
-                exit();
-            }
-        } elseif ($entity_id == 3) { 
-            // Trainee
-            $sqlTrainee = "SELECT * FROM `basic_details` 
-            INNER JOIN `additional_details` ON `additional_details`.`basic_id` = `basic_details`.`id` 
-            WHERE `basic_details`.`id` = '$userId'";
-            $resTrainee = $conn->query($sqlTrainee);
-            if ($resTrainee->num_rows > 0) {
-                $rowTrainee = $resTrainee->fetch_assoc();
-                $trainee_id = $rowTrainee['id'];
-                $course_id = $rowTrainee['course'];
-                $_SESSION['trainee_id'] = $trainee_id;
-                header('Location:NexGen_IT_Academy/index.php');
-                exit();
-            }
-        } else {
-            echo 'Invalid entity ID.';
-        }
-    } else {
-        $_SESSION['msg'] = "Invalid username or password.";
-        header("Location: login.php");
-        exit();
-    }
-// }
+	}
 
 ?>
 
