@@ -1,4 +1,10 @@
-
+<?php 
+       if(!isset($_SESSION['username']))
+    {
+        header("Location:../login.php");
+    } 
+		
+?>
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">

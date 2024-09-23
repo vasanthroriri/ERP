@@ -1,7 +1,11 @@
 <?php
 session_start();
+include("../db/dbConnection.php");
 include("../url.php");    
+   $selQuery = "SELECT * FROM `enquire_tbl` WHERE enquire_status='Active' AND entity_id = 1
+   ORDER BY enquire_id DESC";
     
+    $resQuery = mysqli_query($conn , $selQuery); 
     
 ?>
 <!doctype html>
