@@ -3,13 +3,23 @@ session_start();
 
 include("../db/dbConnection.php");
 include("../url.php");    
-   $selQuery = "SELECT a.*, b.* 
-    FROM client_tbl AS a
-    LEFT JOIN project_tbl as b ON a.client_id=b.client
-    WHERE a.client_status='Active'
-    GROUP BY a.client_id
-    ORDER BY
-    a.client_id DESC";
+   $selQuery = "SELECT 
+   `id`
+   , `name`
+   , `phone`
+   , `email`
+   , `dob`
+   , `gender`
+   , `join_date`
+   , `address`
+   , `image`
+   , `course_id`
+   , `duration`
+   , `fees`
+   , `username`
+   , `password`
+   , `status` 
+   FROM `intern_tbl` WHERE `status` ='Active'";
     
     $resQuery = mysqli_query($conn , $selQuery); 
     
@@ -38,7 +48,7 @@ include("../url.php");
 			<?php include("top.php");?>
 		<!--end header -->
 		<!--start page wrapper -->
-        <?php include("formInternship.php");?>
+        <?php include ("formInternship.php");?>
 		
 		<div class="page-wrapper">
 			<div class="page-content">
@@ -66,9 +76,9 @@ include("../url.php");
 									<tr>
                                     <th>S. No</th>
 										<th>Name</th>
-										<th>Mobile</th>
+										<th>Joining Date</th>
 										<th>Email</th>
-										<th>Role</th>
+										<th>Fees</th>
 										<th>Action</th>
 										
 									</tr>
@@ -76,27 +86,27 @@ include("../url.php");
 								<tbody>
                                 <?php $i=1; while($row = mysqli_fetch_array($resQuery , MYSQLI_ASSOC)) { 
                            
-                                        $client_id  = $row['client_id'];  
-                                        $client_name=$row['client_name'];   
+                                        $id        = $row['id'];  
+                                        $name      =$row['name'];   
                                        // $proName  = $row['project_name'];  
-                                        $email   = $row['client_email'];  
-                                        $phone          = $row['client_phone'];
-                                        $address        = $row['client_location'];   
-                                        $gst        = $row['client_gst'];   
-                                        $compName=$row['client_company'];
+                                        $phone      = $row['phone'];  
+                                        $email      = $row['email'];
+                                        $dob        = $row['dob'];   
+                                        $join_date  = $row['join_date'];   
+                                        $fees       =$row['fees'];
 
                                 
                       ?>
                       <tr>
-                                        <td>Tiger Nixon</td>
-										<td>System Architect</td>
-										<td>Edinburgh</td>
-										<td>61</td>
-										<td>2011/04/25</td>
+                                        <td><?php echo $i ;$i++; ?></td>
+										<td><?php echo $name ;?></td>
+										<td><?php echo $join_date ;?></td>
+										<td><?php echo $email ;?></td>
+										<td><?php echo $fees ;?></td>
                       
                       <td>
-                          <button class="btn btn-sm btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="top" title="View" onclick="goViewClient(<?php echo $client_id; ?>);" ><i class="lni lni-eye"></i></button>
-                          <button type="button" class="btn btn-sm btn-outline-warning" id="editSaveCandidate" onclick="goEditClient(<?php echo $client_id; ?>);" data-bs-toggle="modal" data-bs-target="#editcandidateModal"><i class="lni lni-pencil"></i></button>
+                          <button class="btn btn-sm btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="top" title="View" onclick="goViewClient(<?php echo $id; ?>);" ><i class="lni lni-eye"></i></button>
+                          <button type="button" class="btn btn-sm btn-outline-warning" id="editSaveCandidate" onclick="goEditClient(<?php echo $id; ?>);" data-bs-toggle="modal" data-bs-target="#editClientModal"><i class="lni lni-pencil"></i></button>
                           
                       </td>
                     </tr>
@@ -214,102 +224,73 @@ include("../url.php");
         <!-- Include the function.js -->
         <script src="../assets/js/function.js"></script>
 
+        
 
-        <!-- add form  -->
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-  var form = document.getElementById('candidatesForm');
-  var saveButton = document.getElementById('saveCandidate');
-  var addCondidates = document.getElementById('addCondidates');
+    // Function to set up date validations
+    function setDateValidations() {
+        // Get today's date
+        const today = new Date();
+        
+        // Set the maximum date for the joining date inputs to today
+        const formattedToday = today.toISOString().split("T")[0]; // yyyy-mm-dd format
+        document.getElementById('joiningDate').setAttribute('max', formattedToday);
+        document.getElementById('joiningDateEdit').setAttribute('max', formattedToday); // For edit modal
 
-  // Handle form submission
-  saveButton.addEventListener('click', function (event) {
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-      form.classList.add('was-validated');
-    } else {
-      // Handle successful form submission
-    //   var courseName = document.getElementById('courseName').value;
-    //   var courseCategory = document.getElementById('courseCategory').value;
-    //   var courseDuration = document.getElementById('courseDuration').value;
-    //   var courseLevel = document.getElementById('courseLevel').value;
-
-    //   console.log('Course Name:', courseName);
-    //   console.log('Course Category:', courseCategory);
-    //   console.log('Course Duration:', courseDuration);
-    //   console.log('Course Level:', courseLevel);
-
-      // Optionally, close the modal
-      var modal = bootstrap.Modal.getInstance(document.getElementById('addClientModal'));
-      modal.hide();
+        // Calculate the date for 18 years ago for the DOB
+        const eighteenYearsAgo = new Date();
+        eighteenYearsAgo.setFullYear(today.getFullYear() - 18);
+        const formattedDOB = eighteenYearsAgo.toISOString().split("T")[0]; // yyyy-mm-dd format
+        
+        // Set the max attribute of the DOB inputs to 18 years ago
+        document.getElementById('dob').setAttribute('max', formattedDOB);
+        document.getElementById('dobEdit').setAttribute('max', formattedDOB); // For edit modal
     }
-  });
 
-
-   // Handle form submission
-   addCondidates.addEventListener('click', function (event) {
-
-    // Reset form and remove validation classes when modal is closed
-    form.reset();
-    form.classList.remove('was-validated');
-   });
-
-
-    });
-
-        </script>
-    <!-- add form  -->
-
-
-      <!-- edit form  -->
-      <script>
-            document.addEventListener('DOMContentLoaded', function () {
-  var form = document.getElementById('editCandidatesForm');
-  var saveButton = document.getElementById('editSaveCandidate');
-  
-
-  // Handle form submission
-  saveButton.addEventListener('click', function (event) {
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-      form.classList.add('was-validated');
-    } else {
-      // Handle successful form submission
-    //   var courseName = document.getElementById('courseName').value;
-    //   var courseCategory = document.getElementById('courseCategory').value;
-    //   var courseDuration = document.getElementById('courseDuration').value;
-    //   var courseLevel = document.getElementById('courseLevel').value;
-
-    //   console.log('Course Name:', courseName);
-    //   console.log('Course Category:', courseCategory);
-    //   console.log('Course Duration:', courseDuration);
-    //   console.log('Course Level:', courseLevel);
-
-      // Optionally, close the modal
-      var modal = bootstrap.Modal.getInstance(document.getElementById('editcandidateModal'));
-      modal.hide();
-    }
-  });
-
-
-   // Handle form submission
-   addCondidates.addEventListener('click', function (event) {
-
-    // Reset form and remove validation classes when modal is closed
-    form.reset();
-    form.classList.remove('was-validated');
-   });
-
-
-    });
-
-        </script>
-    <!-- edit form  -->
+    // Call the function to set validations when the page loads
+    window.onload = setDateValidations;
+</script>
+     
 
 
     <script>
+
+$('#username').on('input', function() {
+    var username = $(this).val().trim();
+    
+    // Define the pattern for validation
+    var pattern = /^[a-z]+_?[0-9]{0,5}$/;
+    
+    // Check if the username matches the pattern
+    if (username === '') {
+        $('#usernameError').text("Username is required").show();
+        $('#submitBtn').prop('disabled', true);
+    } else if (!pattern.test(username)) {
+        $('#usernameError').text("Username must consist of lowercase letters, optionally one underscore, and up to 5 numbers.").show();
+        $('#submitBtn').prop('disabled', true);
+    } else {
+        // Proceed with AJAX check if pattern matches
+        $.ajax({
+            url: 'action/checkIntern.php', // The PHP script that checks the username
+            method: 'POST',
+            data: { username: username },
+            dataType: 'json',
+            success: function(response) {
+                if (response.exists) {
+                    $('#usernameError').text("Username already exists").show();
+                    $('#submitBtn').prop('disabled', true); // Disable submit button if username exists
+                } else {
+                    $('#usernameError').hide();
+                    $('#submitBtn').prop('disabled', false); // Enable submit button if username is available
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error(xhr.responseText);
+                $('#usernameError').text("An error occurred while checking the username").show();
+            }
+        });
+    }
+});
 
         function goViewClient(client_id) {
             // Hide Add Candidates button
@@ -343,7 +324,7 @@ function goEditClient(id)
   
   {
     $.ajax({
-        url: 'action/actClient.php',
+        url: 'action/actCandidate.php',
         method: 'POST',
         data: {
             editIdClient: id
@@ -352,13 +333,21 @@ function goEditClient(id)
         success: function(response) {
 			
 
-          $('#editIdClient').val(response.client_id);
-          $('#CnameE').val(response.client_name);
-          $('#compNameE').val(response.comp_name);
-          $('#cAddressE').val(response.address);
-          $('#cEmailE').val(response.email);
-          $('#cPhoneE').val(response.phone);
-          $('#gstE').val(response.gst);
+          $('#EditId').val(response.id);
+          $('#nameEdit').val(response.name);
+          $('#courseEdit').val(response.course_id);
+          $('#feesEdit').val(response.fees);
+          $('#durationNoEdit').val(response.duration);
+        //   $('#durationEdit').val(response.gender);
+          $('#genderEdit').val(response.gender);
+          $('#dobEdit').val(response.dob);
+          $('#phoneEdit').val(response.phone);
+          $('#emailEdit').val(response.email);
+          $('#addressEdit').val(response.address);
+          $('#joiningDateEdit').val(response.join_date);
+          $('#usernameEdit').val(response.username);
+          $('#passwordEdit').val(response.password);
+         
           
 		  
    
@@ -441,169 +430,177 @@ function goDeleteClient(id)
 <script>
         $(document).ready(function () {
 
+// Handle the form submission via AJAX
+$('#candidatesForm').off('submit').on('submit', function (e) {
+    e.preventDefault(); // Prevent normal form submission
 
-                // Handle the form submission via AJAX
-                $('#candidatesForm').off('submit').on('submit', function (e) {
-                    e.preventDefault(); // Prevent normal form submission
+    var form = document.getElementById('candidatesForm');
 
-                    var formData = new FormData(this);
-                    $.ajax({
-                        url: "action/actCandidate.php",
-                        method: 'POST',
-                        data: formData,
-                        contentType: false,
-                        processData: false,
-                        dataType: 'json', // Expect JSON response
-                        success: function (response) {
-                            if (response.success) {
-                                Swal.fire({
-                                    icon: 'success',
-                                    title: 'Success',
-                                    text: response.message,
-                                    timer: 2000
-                                }).then(function () {
-                                    $('#addClientModal').modal('hide'); // Close the modal
-                                    $('.modal-backdrop').remove(); // Remove the backdrop
-                                    setTimeout(function () {
-                                        $('#example2').load(location.href + ' #example2 > *', function () {
-                                            if ($.fn.DataTable.isDataTable('#example2')) {
-                                                $('#example2').DataTable().destroy();
-                                            }
-                                            var table = $('#example2').DataTable({
-                                                "paging": true,
-                                                "ordering": true,
-                                                "searching": true,
-                                                lengthChange: false,
-                                                buttons: ['copy', 'excel', 'pdf', 'print']
-                                            });
-                                            table.buttons().container()
-                                                .appendTo('#example2_wrapper .col-md-6:eq(0)');
-                                        });
-                                    }, 300);
-                                });
+    // Check form validity using the HTML5 built-in validation
+    if (form.checkValidity() === false) {
+        e.stopPropagation(); // Stop submission if form is invalid
+        form.classList.add('was-validated'); // Bootstrap's way of showing validation feedback
+        return; // Exit the function, don't proceed with the AJAX request
+    }
 
-                                // Reset the form after successful submission
-                                resetForm('candidatesForm');
-                            } else {
-                                Swal.fire({
-                                    icon: 'error',
-                                    title: 'Error',
-                                    text: response.message
-                                });
+    // If the form is valid, proceed with the AJAX request
+    var formData = new FormData(this);
+    $.ajax({
+        url: "action/actCandidate.php",
+        method: 'POST',
+        data: formData,
+        contentType: false,
+        processData: false,
+        dataType: 'json', // Expect JSON response
+        success: function (response) {
+            if (response.success) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: response.message,
+                    timer: 2000
+                }).then(function () {
+                    $('#addClientModal').modal('hide'); // Close the modal
+                    $('.modal-backdrop').remove(); // Remove the backdrop
+                    setTimeout(function () {
+                        $('#example2').load(location.href + ' #example2 > *', function () {
+                            if ($.fn.DataTable.isDataTable('#example2')) {
+                                $('#example2').DataTable().destroy();
                             }
-                        },
-                        error: function (xhr, status, error) {
-                            console.error(xhr.responseText);
-                            Swal.fire({
-                                icon: 'error',
-                                title: 'Error',
-                                text: 'An error occurred while adding Client data.'
+                            var table = $('#example2').DataTable({
+                                "paging": true,
+                                "ordering": true,
+                                "searching": true,
+                                lengthChange: false,
+                                buttons: ['copy', 'excel', 'pdf', 'print']
                             });
-                        }
-                    });
+                            table.buttons().container()
+                                .appendTo('#example2_wrapper .col-md-6:eq(0)');
+                        });
+                    }, 300);
                 });
 
-                // Reset the form when the close button is clicked
-                $('#addCondidates').click(function () {
-                    resetForm('candidatesForm');
+                // Reset the form after successful submission
+                resetForm('candidatesForm');
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: response.message
                 });
-        });
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error(xhr.responseText);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'An error occurred while adding Candidate data.'
+            });
+        }
+    });
+});
 
-                // Function to reset the form and hide error messages
-                function resetForm(formId) {
-                document.getElementById(formId).reset(); // Reset the form
-                $('.error-message').hide(); // Hide all error messages
-                }
+
+
+
+    // edit form --------------
+
+    // Handle the form submission via AJAX
+$('#EditcandidatesForm').off('submit').on('submit', function (e) {
+    e.preventDefault(); // Prevent normal form submission
+
+    var form = document.getElementById('candidatesForm');
+
+    // Check form validity using the HTML5 built-in validation
+    if (form.checkValidity() === false) {
+        e.stopPropagation(); // Stop submission if form is invalid
+        form.classList.add('was-validated'); // Bootstrap's way of showing validation feedback
+        return; // Exit the function, don't proceed with the AJAX request
+    }
+
+    // If the form is valid, proceed with the AJAX request
+    var formData = new FormData(this);
+    $.ajax({
+        url: "action/actCandidate.php",
+        method: 'POST',
+        data: formData,
+        contentType: false,
+        processData: false,
+        dataType: 'json', // Expect JSON response
+        success: function (response) {
+            if (response.success) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: response.message,
+                    timer: 2000
+                }).then(function () {
+                    $('#editClientModal').modal('hide'); // Close the modal
+                    $('.modal-backdrop').remove(); // Remove the backdrop
+                    setTimeout(function () {
+                        $('#example2').load(location.href + ' #example2 > *', function () {
+                            if ($.fn.DataTable.isDataTable('#example2')) {
+                                $('#example2').DataTable().destroy();
+                            }
+                            var table = $('#example2').DataTable({
+                                "paging": true,
+                                "ordering": true,
+                                "searching": true,
+                                lengthChange: false,
+                                buttons: ['copy', 'excel', 'pdf', 'print']
+                            });
+                            table.buttons().container()
+                                .appendTo('#example2_wrapper .col-md-6:eq(0)');
+                        });
+                    }, 300);
+                });
+
+                // Reset the form after successful submission
+                resetForm('EditcandidatesForm');
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: response.message
+                });
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error(xhr.responseText);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'An error occurred while adding Candidate data.'
+            });
+        }
+    });
+});
+
+
+
+
+
+
+
+
+    // Reset the form when the 'Add Candidates' button is clicked
+    $('#addCondidates').click(function () {
+        resetForm('candidatesForm');
+    });
+    });
+
+    // Function to reset the form and hide error messages
+    function resetForm(formId) {
+    var form = document.getElementById(formId);
+    form.reset(); // Reset the form
+    form.classList.remove('was-validated'); // Remove validation styling
+    $('.error-message').hide(); // Hide all error messages (if any custom ones exist)
+    }
 
 </script>
-<script>
-
-//--------------Handles edit Clients-----------------------------//
-
-document.addEventListener('DOMContentLoaded', function() {
-$('#updateBtn').click(function(e) {
-        e.preventDefault();
-        var isValid = true;
-        // Validate fields
-       
-        // Validate fields
-        isValid &= validateName('CnameE', 'nameErrorE');
-        isValid &= validateField('compNameE', 'comErrorE');
-        isValid &= validatePhoneNumber('cPhoneE', 'phoneErrorE');
-        isValid &= validateEmail('cEmailE', 'emailErrorE');
-        isValid &= validateField('cAddressE', 'addressErrorE');
-
-        if (isValid) {
-                        $('#editClient').trigger('submit'); // Manually trigger the form submit event if validation passes
-                    }
-                });
-
-                // Handle the form submission via AJAX
-                $('#editClient').off('submit').on('submit', function (e) {
-                    e.preventDefault(); // Prevent normal form submission
-
-                    var formData = new FormData(this);
-                    $.ajax({
-                        url: "action/actClient.php",
-                        method: 'POST',
-                        data: formData,
-                        contentType: false,
-                        processData: false,
-                        dataType: 'json', // Expect JSON response
-                        success: function (response) {
-                            if (response.success) {
-                                Swal.fire({
-                                    icon: 'success',
-                                    title: 'Updated',
-                                    text: response.message,
-                                    timer: 2000
-                                }).then(function () {
-                                    $('#editClientModal').modal('hide'); // Close the modal
-                                    $('.modal-backdrop').remove(); // Remove the backdrop
-                                    setTimeout(function () {
-                                        $('#example2').load(location.href + ' #example2 > *', function () {
-                                            if ($.fn.DataTable.isDataTable('#example2')) {
-                                                $('#example2').DataTable().destroy();
-                                            }
-                                            var table = $('#example2').DataTable({
-                                                "paging": true,
-                                                "ordering": true,
-                                                "searching": true,
-                                                lengthChange: false,
-                                                buttons: ['copy', 'excel', 'pdf', 'print']
-                                            });
-                                            table.buttons().container()
-                                                .appendTo('#example2_wrapper .col-md-6:eq(0)');
-                                        });
-                                    }, 300);
-                                });
-
-                               
-                            } else {
-                                Swal.fire({
-                                    icon: 'error',
-                                    title: 'Error',
-                                    text: response.message
-                                });
-                            }
-                        },
-                        error: function (xhr, status, error) {
-                            console.error(xhr.responseText);
-                            Swal.fire({
-                                icon: 'error',
-                                title: 'Error',
-                                text: 'An error occurred while Editing Clients data.'
-                            });
-                        }
-                    });
-                });
-                $('#editCloseBtn').click(function () {
-                    hideErrorMessages(); // Call the function to hide error messages
-                });
-        });
 
 
-</script>
 	
 	<!--app JS-->
 	<script src="<?php echo $app; ?>"></script>

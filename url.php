@@ -48,6 +48,7 @@ $function="assets/function/function.php";
 
 //live server for trainee 
 $traineeImage="../../../asset/ERP/ERP_image/Trainee/";
+$internImage ="../../../asset/ERP/ERP_image/Intern/";
 $traineeImageView="https://asset.inforiya.in//ERP/ERP_image//Trainee//";
 $qr_imgTrainee="../../../asset/ERP/ERP_image/QRTrainee/";
 $traineeQRView="https://asset.inforiya.in//ERP/ERP_image//QRTrainee//";

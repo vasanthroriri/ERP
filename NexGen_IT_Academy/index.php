@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="en">
-<?php   session_start();
-include("../db/dbConnection.php");
-include("../url.php");
- include("head.php");
+<?php   
+session_start();
+
+include ("../db/dbConnection.php");
+include ("../url.php");
+ include ("head.php");
  
  $stuId = $_SESSION['id'];
  ?>

@@ -1,11 +1,16 @@
 <!--sidebar wrapper -->
 <div class="sidebar-wrapper" data-simplebar="true">
 <div class="sidebar-header">
-				<a href="../index.php">
-				<div>
-					<img src="../assets/img/Logo Roriri.png" class="logo-icon" alt="RORIRI">
-				</div>
-				</a>
+	
+				<?php if ($_SESSION['is_admin'] === 'True'): ?>
+                <a href="../index.php">
+                <?php endif; ?>
+                	<div>
+                		<img src="../assets/img/Logo Roriri.png" class="logo-icon" alt="RORIRI">
+                	</div>
+                <?php if ($_SESSION['is_admin'] === 'True'): ?>
+                </a>
+				<?php endif; ?>
 				<div>
 					<h4 class="logo-text">IT Academy</h4>
 				</div>

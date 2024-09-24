@@ -1,6 +1,9 @@
 <?php
 // include("C:\\xampp\\htdocs\\RORIRI_ERP\\db\\dbConnection.php");
 include("../../db/dbConnection.php");
+include("../../url.php");  
+include("../../assets/function/function.php");
+
 header('Content-Type: application/json');
 
 $response = ['success' => false, 'message' => ''];
@@ -8,90 +11,153 @@ $response = ['success' => false, 'message' => ''];
 // Add Employee
 if (isset($_POST['hdnAction']) && $_POST['hdnAction'] == 'addCandidate') {
 
-    
-    $name = $_POST['name'];
-    $phone = $_POST['phone'];
-    $email = $_POST['email'];
-    $dob = $_POST['dob'];
-    $gender = $_POST['gender'];
-    $join_date = $_POST['gender']; // Current date
-    $address = $_POST['address'];
-    $course_id = $_POST['course']; // Assuming you have a dropdown for courses
-    $duration = $_POST['duration']; // e.g., "3 Month"
-    $fees = $_POST['fees']; // Assuming you have this field in your form
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    
 
+     // Get form data
+     $name = $_POST['name'];
+     $phone = $_POST['phone'];
+     $email = $_POST['email'];
+     $dob = $_POST['dob'];
+     $gender = $_POST['gender'];
+     $join_date = $_POST['joiningDate'];
+     $address = $_POST['address'];
+     $course_id = $_POST['course'];
+     $duration = $_POST['duration'];
+     $fees = $_POST['fees'];
+     $username = $_POST['username'];
+     $password = $_POST['password'];
 
-    $insQuery="INSERT INTO `intern_tbl`
-    ( `name`
-    , `phone`
-    , `email`
-    , `dob`
-    , `gender`
-    , `join_date`
-    , `address`
-    , `image`
-    , `course_id`
-    , `duration`
-    , `fees`
-    , `username`
-    , `password`) 
-    VALUES 
-    (1
-    ,'$name'
-    ,'$compName'
-    ,'$address'
-    ,'$email'
-    ,'$phone'
-    ,'$gst')";
+     // Initialize file paths
+     $aadharPath = $panPath = $bankPath = '';
+     $aname = $pname = $bname = '';
+ 
+     // Handle Aadhar file upload
+     if (!empty($_FILES['image']['tmp_name'])) {
+         $aadharFileType = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
+         $aname = $username . "_." . $aadharFileType;
+         $aadharPath = $internImage . $aname;
+ 
+         if (move_uploaded_file($_FILES['image']['tmp_name'], $aadharPath)) {
+             // $response['message'] = "Aadhar uploaded successfully!";
+         } else {
+             $response['message'] = "Failed to upload Aadhar. Path: $aadharPath";
+         }
+     }
 
-   if ($conn->query($insQuery) === TRUE) {
-    $response['success'] = true;
-    $response['message'] = "Condidate details added successfully!";
+   
+
+    // Proceed with the database query if image upload was successful or not required
+    $insQuery = "INSERT INTO `intern_tbl`
+        (`name`, `phone`, `email`, `dob`, `gender`, `join_date`, `address`, `image`, `course_id`, `duration`, `fees`, `username`, `password`) 
+        VALUES 
+        ('$name', '$phone', '$email', '$dob', '$gender', '$join_date', '$address', '$aname', '$course_id', '$duration', '$fees', '$username', '$password')";
+
+    // Execute the query and send the appropriate response
+    if ($conn->query($insQuery) === TRUE) {
+        $response['success'] = true;
+        $response['message'] = "Candidate details added successfully!";
     } else {
-    $response['message'] = "Unexpected error in adding Condidate details! " . $conn->error;
+        $response['success'] = false;
+        $response['message'] = "Error adding candidate details: " . $conn->error;
     }
+
+    // Send the response back as JSON
     echo json_encode($response);
     exit();
 }
 
-//Handles Update the clients details
-if (isset($_POST['hdnAction']) && $_POST['hdnAction'] == 'editCandidate') {
 
-    $editName=$_POST['CnameE'];
-    $editCID=$_POST['editIdClient'];
-    $editComp=$_POST['compNameE'];
-    $editGst=$_POST['gstE'];
-    $editAddress=$_POST['cAddressE'];
-    $editPhone=$_POST['cPhoneE'];
-    $editEmail=$_POST['cEmailE'];
 
-    $UpdateClient="UPDATE `client_tbl`
-    SET `entity_id`='1',
-    `client_name`='$editName',
-    `client_company`='$editComp',
-    `client_location`='$editAddress',
-    `client_email`='$editEmail',
-    `client_phone`='$editPhone',
-    `client_gst`='$editGst'
-     WHERE `client_id`='$editCID'";
 
-         $editResClient = mysqli_query($conn, $UpdateClient);
+// Edit Employee
+if (isset($_POST['hdnAction']) && $_POST['hdnAction'] == 'EditCandidate') {
+    // Get form data
+    $id = $_POST['EditId']; // Assuming you have the employee ID to update
+    $name = $_POST['nameEdit'];
+    $phone = $_POST['phoneEdit'];
+    $durationNoEdit = $_POST['durationNoEdit'];
+    $durationEdit = $_POST['durationEdit'];
+    $email = $_POST['emailEdit'];
+    $dob = $_POST['dobEdit'];
+    $gender = $_POST['genderEdit'];
+    $join_date = $_POST['joiningDateEdit'];
+    $address = $_POST['addressEdit'];
+    $course_id = $_POST['courseEdit'];
+    $duration = $_POST['duration'];
+    $fees = $_POST['feesEdit'];
+    
+    $password = $_POST['passwordEdit'];
 
-        if ($editResClient) {
-            $_SESSION['message'] = "Condidate details updated successfully!";
-            $response['success'] = true;
-            $response['message'] = "Condidate details updated successfully!";
+    // Initialize file path and existing image variable
+    $aadharPath = '';
+    $existingImage = ''; // Variable to store the existing image path
+
+
+    // Handle Aadhar file upload if a new file is uploaded
+    if (!empty($_FILES['imageEdit']['tmp_name'])) {
+        $aadharFileType = strtolower(pathinfo($_FILES['imageEdit']['name'], PATHINFO_EXTENSION));
+        $aname = $username . "_." . $aadharFileType;
+        $aadharPath = $internImage . $aname;
+
+        // Move uploaded file and check for success
+        if (move_uploaded_file($_FILES['imageEdit']['tmp_name'], $aadharPath)) {
+            // If the upload was successful, set the new image name
+            $aadharPath = $aname; 
         } else {
-            $response['success'] = false;
-            $response['message'] = "Error updating database: " . mysqli_error($conn);
+            $response['message'] = "Failed to upload Image. Path: $aadharPath";
+            echo json_encode($response);
+            exit();
         }
-         
-        echo json_encode($response);
-        exit();
+    } else {
+        // If no new image is uploaded, keep the existing image path
+        $aadharPath = $existingImage; 
+    }
 
+    // Prepare the update query
+    // Only update the image field if a new image was uploaded
+    $updQuery = "UPDATE `intern_tbl` SET 
+        `name` = '$name', 
+        `phone` = '$phone', 
+        `email` = '$email', 
+        `dob` = '$dob', 
+        `gender` = '$gender', 
+        `join_date` = '$join_date', 
+        `address` = '$address', 
+        `course_id` = '$course_id', 
+        `duration` = '$durationEdit', 
+        `fees` = '$fees', 
+        `password` = '$password' 
+        WHERE id = '$id'";
+
+    // Check if a new image was uploaded, if so include it in the update
+    if (!empty($_FILES['image']['tmp_name'])) {
+        $updQuery = "UPDATE `intern_tbl` SET 
+            `name` = '$name', 
+            `phone` = '$phone', 
+            `email` = '$email', 
+            `dob` = '$dob', 
+            `gender` = '$gender', 
+            `join_date` = '$join_date', 
+            `address` = '$address', 
+            `image` = '$aadharPath', 
+            `course_id` = '$course_id', 
+            `duration` = '$durationEdit', 
+            `fees` = '$fees', 
+            `password` = '$password' 
+            WHERE id = '$id'";
+    }
+
+    // Execute the query and send the appropriate response
+    if ($conn->query($updQuery) === TRUE) {
+        $response['success'] = true;
+        $response['message'] = "Candidate details updated successfully!";
+    } else {
+        $response['success'] = false;
+        $response['message'] = "Error updating candidate details: " . $conn->error;
+    }
+
+    // Send the response back as JSON
+    echo json_encode($response);
+    exit();
 }
 
 
@@ -100,7 +166,7 @@ if (isset($_POST['hdnAction']) && $_POST['hdnAction'] == 'editCandidate') {
 if (isset($_POST['editIdClient']) && $_POST['editIdClient'] != '') {
     $editId = $_POST['editIdClient'];
 
-    $clientFetch="SELECT * FROM client_tbl WHERE client_id='$editId'";
+    $clientFetch="SELECT * FROM intern_tbl WHERE id='$editId'";
     $fetchResult = mysqli_query($conn, $clientFetch);
     
     if ($fetchResult) {
@@ -108,13 +174,22 @@ if (isset($_POST['editIdClient']) && $_POST['editIdClient'] != '') {
         $row = mysqli_fetch_assoc($fetchResult);
         
         $clientDetails = array(
-            'client_id' => $row['client_id'],
-            'client_name' => $row['client_name'],
-            'comp_name' => $row['client_company'],
-            'address' => $row['client_location'],
-            'email' => $row['client_email'],
-            'phone' => $row['client_phone'],
-            'gst' => $row['client_gst'],
+            'id' => $row['id'],
+            'name' => $row['name'],
+            'phone' => $row['phone'],
+            'email' => $row['email'],
+            'dob' => $row['dob'],
+            'gender' => $row['gender'],
+            'join_date' => $row['join_date'],
+            'address' => $row['address'],
+            'image' => $row['image'],
+            'course_id' => $row['course_id'],
+            'duration' => $row['duration'],
+            'fees' => $row['fees'],
+            'username' => $row['username'],
+            'password' => $row['password'],
+
+
             
             
 
