@@ -21,7 +21,7 @@ if (isset($_POST['hdnAction']) && $_POST['hdnAction'] == 'addCandidate') {
      $join_date = $_POST['joiningDate'];
      $address = $_POST['address'];
      $course_id = $_POST['course'];
-     $duration = $_POST['duration'];
+     $duration = $_POST['fullDuration'];
      $fees = $_POST['fees'];
      $username = $_POST['username'];
      $password = $_POST['password'];
@@ -73,16 +73,14 @@ if (isset($_POST['hdnAction']) && $_POST['hdnAction'] == 'EditCandidate') {
     // Get form data
     $id = $_POST['EditId']; // Assuming you have the employee ID to update
     $name = $_POST['nameEdit'];
-    $phone = $_POST['phoneEdit'];
-    $durationNoEdit = $_POST['durationNoEdit'];
-    $durationEdit = $_POST['durationEdit'];
+    $phone = $_POST['phoneEdit'];    
     $email = $_POST['emailEdit'];
     $dob = $_POST['dobEdit'];
     $gender = $_POST['genderEdit'];
     $join_date = $_POST['joiningDateEdit'];
     $address = $_POST['addressEdit'];
     $course_id = $_POST['courseEdit'];
-    $duration = $_POST['duration'];
+    $duration = $_POST['fullDuration'];
     $fees = $_POST['feesEdit'];
     
     $password = $_POST['passwordEdit'];
@@ -123,7 +121,7 @@ if (isset($_POST['hdnAction']) && $_POST['hdnAction'] == 'EditCandidate') {
         `join_date` = '$join_date', 
         `address` = '$address', 
         `course_id` = '$course_id', 
-        `duration` = '$durationEdit', 
+        `duration` = '$duration', 
         `fees` = '$fees', 
         `password` = '$password' 
         WHERE id = '$id'";
@@ -140,7 +138,7 @@ if (isset($_POST['hdnAction']) && $_POST['hdnAction'] == 'EditCandidate') {
             `address` = '$address', 
             `image` = '$aadharPath', 
             `course_id` = '$course_id', 
-            `duration` = '$durationEdit', 
+            `duration` = '$duration', 
             `fees` = '$fees', 
             `password` = '$password' 
             WHERE id = '$id'";
@@ -172,6 +170,12 @@ if (isset($_POST['editIdClient']) && $_POST['editIdClient'] != '') {
     if ($fetchResult) {
 
         $row = mysqli_fetch_assoc($fetchResult);
+
+        // Assume you fetched the duration from the database
+    $fullDuration = $row['duration']; // Example value from the database
+
+// Split the duration into number and unit
+    list($durationNo, $durationUnit) = explode(" ", $fullDuration, 2);
         
         $clientDetails = array(
             'id' => $row['id'],
@@ -184,7 +188,8 @@ if (isset($_POST['editIdClient']) && $_POST['editIdClient'] != '') {
             'address' => $row['address'],
             'image' => $row['image'],
             'course_id' => $row['course_id'],
-            'duration' => $row['duration'],
+            'durationNO' => $durationNo,
+            'duration' => $durationUnit,
             'fees' => $row['fees'],
             'username' => $row['username'],
             'password' => $row['password'],
@@ -205,8 +210,8 @@ if (isset($_POST['editIdClient']) && $_POST['editIdClient'] != '') {
 
 if (isset($_POST['clientdeleteId'])) {
     $id = $_POST['clientdeleteId'];
-    $queryDel = "UPDATE `client_tbl` SET client_status='Inactive'
-    WHERE client_id='$id'";
+    $queryDel = "UPDATE `intern_tbl` SET status ='Inactive'
+    WHERE id='$id'";
     $reDel = mysqli_query($conn, $queryDel);
 
     if ($reDel) {
@@ -219,5 +224,54 @@ if (isset($_POST['clientdeleteId'])) {
     }
 
     echo json_encode($response);
+    exit();
+}
+
+
+
+//Handles Fetching the Clients details for View page 
+if (isset($_POST['viewIdClient']) && $_POST['viewIdClient'] != '') {
+    $editId = $_POST['viewIdClient'];
+
+    $clientFetch="SELECT * FROM intern_tbl WHERE id='$editId'";
+    $fetchResult = mysqli_query($conn, $clientFetch);
+    
+    if ($fetchResult) {
+
+        $row = mysqli_fetch_assoc($fetchResult);
+
+        // Assume you fetched the duration from the database
+    $fullDuration = $row['duration']; // Example value from the database
+
+// Split the duration into number and unit
+    list($durationNo, $durationUnit) = explode(" ", $fullDuration, 2);
+        
+        $clientDetails = array(
+            'id' => $row['id'],
+            'name' => $row['name'],
+            'phone' => $row['phone'],
+            'email' => $row['email'],
+            'dob' => $row['dob'],
+            'gender' => $row['gender'],
+            'join_date' => $row['join_date'],
+            'address' => $row['address'],
+            'image' => $row['image'],
+            'course_id' => $row['course_id'],
+            'durationNO' => $durationNo,
+            'duration' => $durationUnit,
+            'fees' => $row['fees'],
+            'username' => $row['username'],
+            'password' => $row['password'],
+
+
+            
+            
+
+        );
+        echo json_encode($clientDetails);
+    } else {
+        $response['message'] = "Error executing query: " . mysqli_error($conn);
+        echo json_encode($response);
+    }
     exit();
 }

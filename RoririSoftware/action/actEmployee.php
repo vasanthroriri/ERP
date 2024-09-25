@@ -283,9 +283,9 @@ WHERE basic_details.id='$empId'";
 if (isset($_POST['deleteId'])) {
     $id = $_POST['deleteId'];
     $queryDel = "UPDATE basic_details a
-LEFT JOIN additional_details as b ON b.basic_id=a.id
-SET a.status='Inactive' AND b.add_status='Inactive'
-WHERE a.id='$id' AND b.basic_id='$id'";
+LEFT JOIN additional_details b ON b.basic_id = a.id
+SET a.status = 'Inactive', b.add_status = 'Inactive'
+WHERE a.id = '$id'";
     $reDel = mysqli_query($conn, $queryDel);
 
     if ($reDel) {
@@ -382,6 +382,31 @@ function url_exists($url) {
     } else {
         return false;
     }
+}
+
+
+if (isset($_POST['status']) && $_POST['status'] != '') {
+
+    $status = $_POST['status'];
+
+// Prepare SQL query based on the selected status
+$sql = "SELECT a.*, b.*, c.*, b.status as emp_status 
+        FROM basic_details AS b 
+        LEFT JOIN additional_details AS a ON a.basic_id = b.id 
+        LEFT JOIN emp_additional_details AS c ON c.basic_id = b.id 
+        WHERE a.entity_id = 1 AND b.status = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s", $status); // Bind the status parameter
+$stmt->execute();
+$result = $stmt->get_result();
+
+$employees = [];
+while ($row = $result->fetch_assoc()) {
+    $employees[] = $row; // Collect the employee data
+}
+
+echo json_encode($employees); // Return the data as JSON
+
 }
 
 ?>

@@ -2,7 +2,8 @@
 session_start();
 
 include("../db/dbConnection.php");
-include("../url.php");    
+include("../url.php");
+include("action/function.php");    
    $selQuery = "SELECT 
    `id`
    , `name`
@@ -22,6 +23,8 @@ include("../url.php");
    FROM `intern_tbl` WHERE `status` ='Active'";
     
     $resQuery = mysqli_query($conn , $selQuery); 
+
+    
     
 ?>
 <!doctype html>
@@ -105,9 +108,9 @@ include("../url.php");
 										<td><?php echo $fees ;?></td>
                       
                       <td>
-                          <button class="btn btn-sm btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="top" title="View" onclick="goViewClient(<?php echo $id; ?>);" ><i class="lni lni-eye"></i></button>
+                          <button class="btn btn-sm btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="top" title="View" onclick="goViewCandiaadate(<?php echo $id; ?>);" ><i class="lni lni-eye"></i></button>
                           <button type="button" class="btn btn-sm btn-outline-warning" id="editSaveCandidate" onclick="goEditClient(<?php echo $id; ?>);" data-bs-toggle="modal" data-bs-target="#editClientModal"><i class="lni lni-pencil"></i></button>
-                          
+                          <button class="btn btn-sm btn-outline-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" onclick="goDeleteClient(<?php echo $id; ?>);"><i class="lni lni-trash"></i></button>  
                       </td>
                     </tr>
                     <?php } ?>   
@@ -125,11 +128,13 @@ include("../url.php");
 								<div class="card">
 									<div class="card-body">
 										<div class="d-flex flex-column align-items-center text-center">
-											<img src="../assets/images/avatars/avatar-2.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+
+                                        
+                                            <img id="viewImage" src="" alt="Candidate Image" class="rounded-circle p-1 bg-primary" width="110" />
 											<div class="mt-3">
-												<h4>John Doe</h4>
-												<p class="text-secondary mb-1">Full Stack Developer</p>
-												<p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
+												<h4 id="viewName"></h4>
+												<p class="text-secondary mb-1" id="viewCourse"></p>
+												<p class="text-muted font-size-sm" id="viewAddress"></p>
 												
 											</div>
 										</div>
@@ -143,18 +148,35 @@ include("../url.php");
 									<div class="card-body">
 										<div class="row mb-3">
 											<div class="col-sm-3">
-												<h6 class="mb-0">Full Name</h6>
+												<h6 class="mb-0">Fees</h6>
 											</div>
 											<div class="col-sm-9 text-secondary">
-												<input type="text" class="form-control" value="John Doe" />
+                                                <p class="form-control" id="viewFees"></p>
 											</div>
 										</div>
 										<div class="row mb-3">
 											<div class="col-sm-3">
-												<h6 class="mb-0">Email</h6>
+												<h6 class="mb-0">Duration</h6>
 											</div>
 											<div class="col-sm-9 text-secondary">
-												<input type="text" class="form-control" value="john@example.com" />
+												
+                                                <p class="form-control" id="viewDuration"></p>
+											</div>
+										</div>
+										<div class="row mb-3">
+											<div class="col-sm-3">
+												<h6 class="mb-0">Gender</h6>
+											</div>
+											<div class="col-sm-9 text-secondary">
+                                                <p class="form-control" id="viewGender"></p>
+											</div>
+										</div>
+										<div class="row mb-3">
+											<div class="col-sm-3">
+												<h6 class="mb-0">Date Of Brith</h6>
+											</div>
+											<div class="col-sm-9 text-secondary">
+                                                <p class="form-control" id="viewDob"></p>
 											</div>
 										</div>
 										<div class="row mb-3">
@@ -162,23 +184,42 @@ include("../url.php");
 												<h6 class="mb-0">Phone</h6>
 											</div>
 											<div class="col-sm-9 text-secondary">
-												<input type="text" class="form-control" value="(239) 816-9029" />
+                                                <p class="form-control" id="viewPhone"></p>
 											</div>
 										</div>
-										<div class="row mb-3">
+                                        <div class="row mb-3">
 											<div class="col-sm-3">
-												<h6 class="mb-0">Mobile</h6>
+												<h6 class="mb-0">Email</h6>
 											</div>
 											<div class="col-sm-9 text-secondary">
-												<input type="text" class="form-control" value="(320) 380-4539" />
+                                                <p class="form-control" id="viewMail"></p>
 											</div>
 										</div>
-										<div class="row mb-3">
+                                        <div class="row mb-3">
 											<div class="col-sm-3">
-												<h6 class="mb-0">Address</h6>
+												<h6 class="mb-0">Joining Date</h6>
 											</div>
 											<div class="col-sm-9 text-secondary">
-												<input type="text" class="form-control" value="Bay Area, San Francisco, CA" />
+												
+                                                <p class="form-control" id="viewJoiningDate"></p>
+											</div>
+										</div>
+
+                                        <div class="row mb-3">
+											<div class="col-sm-3">
+												<h6 class="mb-0">Username</h6>
+											</div>
+											<div class="col-sm-9 text-secondary">
+                                                <p class="form-control" id="viewUsername"></>
+											</div>
+										</div>
+
+                                        <div class="row mb-3">
+											<div class="col-sm-3">
+												<h6 class="mb-0">Password</h6>
+											</div>
+											<div class="col-sm-9 text-secondary">								
+                                                <p class="form-control" id="viewPassword"></p>
 											</div>
 										</div>
 										
@@ -292,17 +333,7 @@ $('#username').on('input', function() {
     }
 });
 
-        function goViewClient(client_id) {
-            // Hide Add Candidates button
-            document.getElementById("addCondidates").style.display = "none";
-
-            // Show Back button
-            document.getElementById("backBtnView").style.display = "inline-block";
-
-            // Hide candidate table and show detailed view (you can customize this part)
-            document.getElementById("condidateTable").style.display = "none";
-            document.getElementById("nextDivId").style.display = "block";
-        }
+        
 
         // Back button click event
         document.getElementById('backBtnView').addEventListener('click', function() {
@@ -320,9 +351,10 @@ $('#username').on('input', function() {
 
 
 
-function goEditClient(id) 
+    function goEditClient(id) 
   
   {
+    $('#usernameEdit').prop('disabled', true);
     $.ajax({
         url: 'action/actCandidate.php',
         method: 'POST',
@@ -337,8 +369,8 @@ function goEditClient(id)
           $('#nameEdit').val(response.name);
           $('#courseEdit').val(response.course_id);
           $('#feesEdit').val(response.fees);
-          $('#durationNoEdit').val(response.duration);
-        //   $('#durationEdit').val(response.gender);
+          $('#durationNoEdit').val(response.durationNO);
+          $('#durationEdit').val(response.duration);
           $('#genderEdit').val(response.gender);
           $('#dobEdit').val(response.dob);
           $('#phoneEdit').val(response.phone);
@@ -357,14 +389,84 @@ function goEditClient(id)
             console.error('AJAX request failed:', status, error);
         }
     });
-}
+    }
+
+
+    //---view function --------
+
+
+    function goViewCandiaadate(id) 
+                {   
+
+                // Hide Add Candidates button
+            document.getElementById("addCondidates").style.display = "none";
+
+            // Show Back button
+            document.getElementById("backBtnView").style.display = "inline-block";
+
+            // Hide candidate table and show detailed view (you can customize this part)
+            document.getElementById("condidateTable").style.display = "none";
+            document.getElementById("nextDivId").style.display = "block";
+
+            // Use PHP to set the base URL for the images
+    var baseUrl = "<?php echo $internImageView; ?>"; // Ensure this variable is set in PHP
+    var defaultUrl = "<?php echo $default_image; ?>"; // Ensure this variable is set in PHP
+
+    $.ajax({
+        url: 'action/actCandidate.php',
+        method: 'POST',
+        data: {
+            viewIdClient: id
+        },
+        dataType: 'json', // Specify the expected data type as JSON
+        success: function(response) {
+
+            // Check if the image property exists and is not empty
+        if (response.image && response.image.trim() !== '') {
+            // Set the src attribute of the img tag to the actual image
+            $('#viewImage').attr('src', baseUrl + response.image);
+        } else {
+            // Set the src attribute to the default image
+            $('#viewImage').attr('src', defaultUrl);
+        }
+
+			
+             
+             
+
+          $('#viewName').text(response.name);
+          $('#viewCourse').text(response.course_id);
+          $('#viewFees').text(response.fees);
+          $('#viewDuration').text(response.durationNO + " " + response.duration);
+        //   $('#durationEdit').text(response.duration);
+          $('#viewGender').text(response.gender);
+          $('#viewDob').text(response.dob);
+          $('#viewPhone').text(response.phone);
+          $('#viewMail').text(response.email);
+          $('#viewAddress').text(response.address);
+          $('#viewJoiningDate').text(response.join_date);
+          $('#viewUsername').text(response.username);
+          $('#viewPassword').text(response.password);
+         
+          
+		  
+   
+        },
+        error: function(xhr, status, error) {
+            // Handle errors here
+            console.error('AJAX request failed:', status, error);
+        }
+    });
+    }
+
+
 function goDeleteClient(id)
 {
     //alert(id);
-    if(confirm("Are you sure you want to delete Client?"))
+    if(confirm("Are you sure you want to delete Candidate?"))
     {
       $.ajax({
-        url: 'action/actClient.php',
+        url: 'action/actCandidate.php',
         method: 'POST',
         data: {
           clientdeleteId: id
@@ -442,9 +544,20 @@ $('#candidatesForm').off('submit').on('submit', function (e) {
         form.classList.add('was-validated'); // Bootstrap's way of showing validation feedback
         return; // Exit the function, don't proceed with the AJAX request
     }
+    // Concatenate duration number and unit
+    var durationNo = $('#durationNo').val();
+    var durationUnit = $('#duration').val();
+    var fullDuration = durationNo + " " + durationUnit; // Example: "5 Day"
 
-    // If the form is valid, proceed with the AJAX request
+    // Create a new FormData object
     var formData = new FormData(this);
+    formData.append('fullDuration', fullDuration); // Add the concatenated duration to FormData
+
+    // Disable the submit button to prevent double submission
+    const submitButton = $(this).find('button[type="submit"]');
+    submitButton.prop('disabled', true);
+
+    
     $.ajax({
         url: "action/actCandidate.php",
         method: 'POST',
@@ -491,6 +604,8 @@ $('#candidatesForm').off('submit').on('submit', function (e) {
             }
         },
         error: function (xhr, status, error) {
+            // Re-enable the submit button on error
+            submitButton.prop('disabled', false);
             console.error(xhr.responseText);
             Swal.fire({
                 icon: 'error',
@@ -506,12 +621,12 @@ $('#candidatesForm').off('submit').on('submit', function (e) {
 
     // edit form --------------
 
-    // Handle the form submission via AJAX
+// Handle the form submission via AJAX
 $('#EditcandidatesForm').off('submit').on('submit', function (e) {
     e.preventDefault(); // Prevent normal form submission
-
-    var form = document.getElementById('candidatesForm');
-
+    $('#usernameEdit').prop('disabled', false);
+    var form = document.getElementById('EditcandidatesForm');
+    
     // Check form validity using the HTML5 built-in validation
     if (form.checkValidity() === false) {
         e.stopPropagation(); // Stop submission if form is invalid
@@ -519,8 +634,20 @@ $('#EditcandidatesForm').off('submit').on('submit', function (e) {
         return; // Exit the function, don't proceed with the AJAX request
     }
 
-    // If the form is valid, proceed with the AJAX request
+    // Concatenate duration number and unit
+    var durationNo = $('#durationNoEdit').val();
+    var durationUnit = $('#durationEdit').val();
+    var fullDuration = durationNo + " " + durationUnit; // Example: "5 Day"
+
+    // Create a new FormData object
     var formData = new FormData(this);
+    formData.append('fullDuration', fullDuration); // Add the concatenated duration to FormData
+
+    // Disable the submit button to prevent double submission
+    const submitButton = $(this).find('button[type="submit"]');
+    submitButton.prop('disabled', true);
+
+  
     $.ajax({
         url: "action/actCandidate.php",
         method: 'POST',
@@ -529,6 +656,9 @@ $('#EditcandidatesForm').off('submit').on('submit', function (e) {
         processData: false,
         dataType: 'json', // Expect JSON response
         success: function (response) {
+            // Re-enable the submit button after success or error
+            submitButton.prop('disabled', false);
+
             if (response.success) {
                 Swal.fire({
                     icon: 'success',
@@ -567,6 +697,8 @@ $('#EditcandidatesForm').off('submit').on('submit', function (e) {
             }
         },
         error: function (xhr, status, error) {
+            // Re-enable the submit button on error
+            submitButton.prop('disabled', false);
             console.error(xhr.responseText);
             Swal.fire({
                 icon: 'error',
@@ -576,7 +708,6 @@ $('#EditcandidatesForm').off('submit').on('submit', function (e) {
         }
     });
 });
-
 
 
 

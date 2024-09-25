@@ -5,18 +5,26 @@ include("../db/dbConnection.php");
 include("../url.php");
 include("action/function.php");
 
-$username =$_SESSION['username'];
 
-if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] != 'True') {
-    // If the user is not an admin, set the empId to the user's ID
-    $empId = $_SESSION['id'];
-} elseif (isset($_GET['id']) && $_GET['id'] != '') {
+
+if (isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['username']) && !empty($_GET['username'])) {
+
+    
+    // Use GET parameters if both id and username are provided
     $empId = $_GET['id'];
+    $username1 = $_GET['username'];
+    
+} elseif (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] !== 'True') {
+    // If the user is not an admin, use session values for empId and username
+    $empId = $_SESSION['id'];
+    $username1 = $_SESSION['username'];
 } else {
-    // If no employee ID is provided, redirect to employees.php
+    // If neither GET nor SESSION values are available, redirect
     header("Location: employee.php");
-    exit(); // Ensure the script stops executing after redirection
+    exit();
 }
+
+
 
 // Prepare and execute the SQL query
 $selQuery = "SELECT additional_details.*, basic_details.*,emp_additional_details.*,roles.*
@@ -570,69 +578,7 @@ if ($result1) {
 });
   </script>
 
-<script>
 
-    document.addEventListener("DOMContentLoaded", function() {
-
-        // Output PHP variable to JavaScript
-    const username = "<?php echo $username; ?>";
-        // Load data initially
-        loadAttendanceData(username);
-
-    });
-
-    let table;
-
-    function loadAttendanceData(username) {
-        
-
-        fetch(`https://roririmobileapp.roririsoft.com/cms/punch/list/${username}/`)
-            .then(response => response.json())
-            .then(data => {
-                
-
-                if ($.fn.DataTable.isDataTable('#example3')) {
-                    $('#example3').DataTable().destroy();
-                }
-          
-                const tableBody = document.querySelector("#example3 tbody");
-                tableBody.innerHTML = '';
-
-                if (data.data.results && data.data.results.length > 0) {
-                    let i = 1;
-                    data.data.results.forEach(record => {
-                        const row = `<tr>
-                            <td>${i++}</td>
-                            <td>${record.user_detail.full_name}</td>
-                            <td>${record.punch_date}</td>
-                            <td>${record.punch_in}</td>
-                            <td>${record.punch_out ? record.punch_out : 'N/A'}</td>
-                            <td>${record.user_detail.role}</td>
-                        </tr>`;
-                        tableBody.innerHTML += row;
-                    });
-
-                    // Initialize DataTable with buttons
-                    table = $('#example3').DataTable({
-                        lengthChange: false,
-                        buttons: ['copy', 'excel', 'pdf', 'print']
-                    });
-                    $('#example3').DataTable().buttons().container()
-                        .appendTo('#example3_wrapper .col-md-6:eq(0)');
-
-                } else {
-                    tableBody.innerHTML = `<tr><td colspan="6">No data found for the selected date.</td></tr>`;
-                }
-            })
-            .catch(error => {
-                document.getElementById("loading").style.display = 'none';
-                console.error('Error fetching attendance records:', error);
-                document.querySelector("#example3 tbody").innerHTML = `<tr><td colspan="6">Error loading data.</td></tr>`;
-            });
-    }
-
-    
-</script>
 	<script>
 		$(document).ready(function() {
     var table = $('#example2').DataTable({
@@ -1078,5 +1024,72 @@ function getServiceName($conn, $services) {
 }
 ?>
 </body>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+        // Output PHP variable to JavaScript
+    const username1 = "<?php echo $username1; ?>";
+    // Check the username value
+    console.log("Username:", username1);
+    
+        // Load data initially
+        loadAttendanceData(username1);
+
+    });
+
+    let table;
+
+    function loadAttendanceData(username) {
+        
+
+        fetch(`https://roririmobileapp.roririsoft.com/cms/punch/list/${username}/`)
+            .then(response => response.json())
+            .then(data => {
+                
+
+                if ($.fn.DataTable.isDataTable('#example3')) {
+                    $('#example3').DataTable().destroy();
+                }
+          
+                const tableBody = document.querySelector("#example3 tbody");
+                tableBody.innerHTML = '';
+
+                if (data.data.results && data.data.results.length > 0) {
+                    let i = 1;
+                    data.data.results.forEach(record => {
+                        const row = `<tr>
+                            <td>${i++}</td>
+                            <td>${record.user_detail.full_name}</td>
+                            <td>${record.punch_date}</td>
+                            <td>${record.punch_in}</td>
+                            <td>${record.punch_out ? record.punch_out : 'N/A'}</td>
+                            <td>${record.user_detail.role}</td>
+                        </tr>`;
+                        tableBody.innerHTML += row;
+                    });
+
+                    // Initialize DataTable with buttons
+                    table = $('#example3').DataTable({
+                        lengthChange: false,
+                        buttons: ['copy', 'excel', 'pdf', 'print']
+                    });
+                    $('#example3').DataTable().buttons().container()
+                        .appendTo('#example3_wrapper .col-md-6:eq(0)');
+
+                } else {
+                    tableBody.innerHTML = `<tr><td colspan="6">No data found for the selected date.</td></tr>`;
+                }
+            })
+            .catch(error => {
+                document.getElementById("loading").style.display = 'none';
+                console.error('Error fetching attendance records:', error);
+                document.querySelector("#example3 tbody").innerHTML = `<tr><td colspan="6">Error loading data.</td></tr>`;
+            });
+    }
+
+    
+</script>
 
 </html>

@@ -1,10 +1,14 @@
 <div class="sidebar-wrapper" data-simplebar="true">
 <div class="sidebar-header">
+                <?php if ($_SESSION['is_admin'] === 'True'): ?>
                 <a href="../index.php">
-				<div>
-					<img src="../assets/img/Logo Roriri.png" class="logo-icon" alt="RORIRI">
-				</div>
-				</a>
+                <?php endif; ?>
+                	<div>
+                		<img src="../assets/img/Logo Roriri.png" class="logo-icon" alt="RORIRI">
+                	</div>
+                <?php if ($_SESSION['is_admin'] === 'True'): ?>
+                </a>
+                <?php endif; ?>
 				<div>
 					<h4 class="logo-text">RORIRI</h4>
 				</div>
@@ -68,22 +72,13 @@
                 </a>
             </li>
 
-            
-
             <li >
                 <a href="coordinator.php">
                 <div class="parent-icon"><i class="lni lni-crown me-2"></i></div>
                     <div class="menu-title">Coordinator</div>
                 </a>
             </li>
-           
-            <li >
-                <a href="https://treasurehunt.roririsoft.com/">
-                <div class="parent-icon"><i class="lni lni-bulb me-2"></i></div>
-                    <div class="menu-title">Treasure Hunt</div>
-                </a>
-            </li>
-
+          
             <li >
                 <a href="internship.php">
                 <div class="parent-icon"><i class="lni lni-star me-2"></i></div>
@@ -116,14 +111,6 @@
                 <a href="../RoririSoftware/coordinator.php">
                 <div class="parent-icon"><i class="lni lni-crown me-2"></i></div>
                     <div class="menu-title">Coordinator</div>
-                </a>
-            </li>
-
-            
-            <li >
-                <a href="https://treasurehunt.roririsoft.com/">
-                <div class="parent-icon"><i class="lni lni-bulb me-2"></i></div>
-                    <div class="menu-title">Treasure Hunt</div>
                 </a>
             </li>
 

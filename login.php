@@ -2,9 +2,6 @@
 session_start();
 include("db/dbConnection.php");
 
-
-include("url.php");
-
 if (isset($_REQUEST['logout'])) {
     session_destroy();
     header("Location: login.php");
@@ -13,19 +10,22 @@ $error = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
-
+    $locationName = $_POST['location_name'];
+    $systemInfo = $_POST['system_info'];
+    date_default_timezone_set('Asia/Kolkata');
+    $loginTime = date('Y-m-d h:i:s A');
     // Get the current host
     $host = $_SERVER['HTTP_HOST'];
 
     // Define entity IDs based on host names
     $entity_id = 0; // Default to 0 or any value you prefer
-    if ($host === 'trainee.nexgenitacademy.com') { 
-        $entity_id = 3; // Host A corresponds to entity ID 1
-    } elseif ($host === 'workforce.roririsoft.com') {
-        $entity_id = 1; // Host B corresponds to entity ID 2
-    } elseif ($host === 'erp.inforiya.in') {
-		$entity_id = ''; // Host B corresponds to entity ID 2
-	}// Add more host conditions if needed
+    if ($host === 'stagingtrainee.nexgenitacademy.com') { 
+        $entity_id = 3; // Host A corresponds to entity ID 3
+    } elseif ($host === 'stagingworkforce.roririsoft.com') {
+        $entity_id = 1; // Host B corresponds to entity ID 1
+    } elseif ($host === 'stagingerp.inforiya.in') {
+        $entity_id = ''; 
+    } // Add more host conditions if needed
 
     // SQL query to fetch user details
     $sql = "SELECT basic_details.*, roles.*, additional_details.* 
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             WHERE basic_details.username = '$username' 
             AND basic_details.password = '$password'"; 
     
-    if($entity_id != '') {
+    if ($entity_id != '') {
         $sql .= " AND additional_details.entity_id = '$entity_id'"; // Apply entity ID filter
     }
     $result = $conn->query($sql);
@@ -61,6 +61,75 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['name'] = $name;
         $_SESSION['course_id_1'] = $course_id_1;
 
+       // Store login data in JSON format
+$loginData = [
+    'location' => $locationName,   // Assuming $locationName contains the location
+    'system_info' => $systemInfo,  // Assuming $systemInfo contains system information
+    'login_time' => $loginTime     // Assuming $loginTime contains the login time
+];
+
+// First, check if the user already has a row in the login_history table
+$stmt = $conn->prepare("SELECT system_info FROM login_history WHERE basic_id = ?");
+$stmt->bind_param("i", $userId);
+$stmt->execute();
+$stmt->store_result();
+
+if ($stmt->num_rows > 0) {
+    // Row exists, fetch the existing system_info
+    $stmt->bind_result($existingSystemInfo);
+    $stmt->fetch();
+    
+    // Decode the existing system_info JSON into an array
+    $existingDataArray = json_decode($existingSystemInfo, true);
+
+    // If there's no data or it's not an array, create a new array
+    if (!is_array($existingDataArray)) {
+        $existingDataArray = [];
+    }
+
+    // Append the new login data as a new JSON object in the array
+    $existingDataArray[] = $loginData;
+
+    // Encode the updated array back to JSON
+    $updatedSystemInfo = json_encode($existingDataArray);
+
+    // Update the row with the new combined data
+    $updateStmt = $conn->prepare("UPDATE login_history SET system_info = ? WHERE basic_id = ?");
+    $updateStmt->bind_param("si", $updatedSystemInfo, $userId);
+    
+    if ($updateStmt->execute()) {
+        echo "Record updated successfully";
+    } else {
+        echo "Error updating record: " . $updateStmt->error;
+    }
+
+    // Close update statement
+    $updateStmt->close();
+
+} else {
+    // No row exists, insert a new record with the new login data in JSON format
+    $newLoginDataArray = [];
+    $newLoginDataArray[] = $loginData;  // Add the first login data entry to the array
+
+    // Encode the array into JSON format
+    $jsonData = json_encode($newLoginDataArray);
+
+    // Insert the new data
+    $insertStmt = $conn->prepare("INSERT INTO login_history (basic_id, system_info) VALUES (?, ?)");
+    $insertStmt->bind_param("is", $userId, $jsonData);
+    
+    if ($insertStmt->execute()) {
+        echo "New record created successfully";
+    } else {
+        echo "Error inserting record: " . $insertStmt->error;
+    }
+
+    // Close insert statement
+    $insertStmt->close();
+}
+
+// Close select statement
+$stmt->close();
         if ($is_admin === 'True') {
             $sqlAdmin = "SELECT role FROM `admin_tbl` WHERE `id` = '$userId'";
             $resAdmin = $conn->query($sqlAdmin);
@@ -114,34 +183,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 }
-
 ?>
 
 <!doctype html>
 <html lang="en">
-
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!--favicon-->
-	<link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" />
-	<!--plugins-->
-	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
-	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
-	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
-	<!-- loader-->
-	<link href="assets/css/pace.min.css" rel="stylesheet" />
-	<script src="assets/js/pace.min.js"></script>
-	<!-- Bootstrap CSS -->
-	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-	<link href="assets/css/bootstrap-extended.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-	<link href="assets/css/app.css" rel="stylesheet">
-	<link href="assets/css/icons.css" rel="stylesheet">
-	<title>RORIRI Software Solutions</title>
-</head>
-<style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--favicon-->
+    <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" />
+    <!--plugins-->
+    <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+    <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+    <link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+    <!-- loader-->
+    <link href="assets/css/pace.min.css" rel="stylesheet" />
+    <script src="assets/js/pace.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-extended.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="assets/css/app.css" rel="stylesheet">
+    <link href="assets/css/icons.css" rel="stylesheet">
+    <title>RORIRI Software Solutions</title>
+    <style>
         #error-message {
             display: none;
             color: red;
@@ -149,106 +215,164 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .error {
             display: block;
         }
+        .device-type {
+            display: none;
+        }
     </style>
-<body class="">
-	<!--wrapper-->
-	<div class="wrapper">
-		<div class="section-authentication-cover">
-			<div class="">
-				<div class="row g-0">
-
-					<div class="col-12 col-xl-7 col-xxl-8 auth-cover-left align-items-center justify-content-center d-none d-xl-flex">
-
+</head>
+<body>
+    <div class="wrapper">
+        <div class="section-authentication-cover">
+            <div class="">
+                <div class="row g-0">
+                    <div class="col-12 col-xl-7 col-xxl-8 auth-cover-left align-items-center justify-content-center d-none d-xl-flex">
                         <div class="card shadow-none bg-transparent shadow-none rounded-0 mb-0">
-							<div class="card-body">
-                                 <img src="assets/images/login-images/login-cover.svg" class="img-fluid auth-img-cover-login" width="650" alt=""/>
-							</div>
-						</div>
-						
-					</div>
+                            <div class="card-body">
+                                <img src="assets/images/login-images/login-cover.svg" class="img-fluid auth-img-cover-login" width="650" alt=""/>
+                            </div>
+                        </div>
+                    </div>
 
-					<div class="col-12 col-xl-5 col-xxl-4 auth-cover-right align-items-center justify-content-center">
-						<div class="card rounded-0 m-3 shadow-none bg-transparent mb-0">
-							<div class="card-body p-sm-5">
-								<div class="">
-									<div class="mb-3 text-center">
-										<img src="assets\images\login-images\logo.png" width="170" alt="">
-									</div>
-									<div class="text-center mb-4">
-										<h5 class="">Login</h5>
-									</div>
-									<div class="form-body">
-									
-										<?php if(isset($_SESSION['msg'])) {   ?>
+                    <div class="col-12 col-xl-5 col-xxl-4 auth-cover-right align-items-center justify-content-center">
+                        <div class="card rounded-0 m-3 shadow-none bg-transparent mb-0">
+                            <div class="card-body p-sm-5">
+                                <div class="">
+                                    <div class="mb-3 text-center">
+                                        <img src="assets/images/login-images/logo.png" width="170" alt="">
+                                    </div>
+                                    <div class="text-center mb-4">
+                                        <h5 class="">Login</h5>
+                                    </div>
+                                    <div class="form-body">
+                                        <?php if(isset($_SESSION['msg'])) { ?>
+                                            <div class="alert alert-danger">
+                                                <?php echo $_SESSION['msg']; session_unset(); ?>
+                                            </div>
+                                        <?php } ?>
+                                        <form class="row g-3" action="" method="POST">
+                                            <input type="hidden" id="locationName" name="location_name">
+                                            <input type="hidden" id="systemInfo" name="system_info">
+                                            <div class="col-12">
+                                                <label for="inputEmailAddress" class="form-label">Username</label>
+                                                <input type="text" class="form-control" name="username" id="inputEmailAddress" placeholder="Username">
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="inputChoosePassword" class="form-label">Password</label>
+                                                <div class="input-group" id="show_hide_password">
+                                                    <input type="password" class="form-control border-end-0" name="password" id="inputChoosePassword" placeholder="Enter Password">
+                                                    <a href="javascript:;" class="input-group-text bg-transparent"><i class="bx bx-hide"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-grid">
+                                                    <button type="submit" class="btn btn-primary">Login</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div id='message'><?php echo $error ?? ''; ?></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end row-->
+            </div>
+        </div>
+    </div>
 
-										
-											<div class="alert alert-danger">
-												
-												<?php echo $_SESSION['msg']; session_unset(); ?>
-											</div>
-									
-										<p></p> <?php } ?>
-										<form class="row g-3" action="" method="POST">
-										
-											<div class="col-12">
-												<label for="inputEmailAddress" class="form-label">Username</label>
-												<input type="text" class="form-control" name="username" id="inputEmailAddress" placeholder="Username">
-											</div>
-											<div class="col-12">
-												<label for="inputChoosePassword" class="form-label">Password</label>
-												<div class="input-group" id="show_hide_password">
-													<input type="password" class="form-control border-end-0" name="password" id="inputChoosePassword"  placeholder="Enter Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class="bx bx-hide"></i></a>
-												</div>
-											</div>
-											
-											<div class="col-12">
-												<div class="d-grid">
-													<button type="submit" class="btn btn-primary">Login</button>
-												</div>
-											</div>
-											
-										</form>
-										<?php if(isset($error)) { ?>
-            <div id='message'><?php echo $error; ?></div>
-        <?php } ?>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!--plugins-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+    <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+    <!-- Password show & hide js -->
+<script>
+    $(document).ready(function () {
+    $("#show_hide_password a").on('click', function (event) {
+        event.preventDefault();
+        if ($('#show_hide_password input').attr("type") === "text") {
+            $('#show_hide_password input').attr('type', 'password');
+            $('#show_hide_password i').addClass("bx-hide");
+            $('#show_hide_password i').removeClass("bx-show");
+        } else if ($('#show_hide_password input').attr("type") === "password") {
+            $('#show_hide_password input').attr('type', 'text');
+            $('#show_hide_password i').removeClass("bx-hide");
+            $('#show_hide_password i').addClass("bx-show");
+        }
+    });
 
-				</div>
-				<!--end row-->
-			</div>
-		</div>
-	</div>
-	<!--end wrapper-->
-	<!-- Bootstrap JS -->
-	<script src="assets/js/bootstrap.bundle.min.js"></script>
-	<!--plugins-->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
-	<script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
-	<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-	<!--Password show & hide js -->
-	<script>
-		$(document).ready(function () {
-			$("#show_hide_password a").on('click', function (event) {
-				event.preventDefault();
-				if ($('#show_hide_password input').attr("type") == "text") {
-					$('#show_hide_password input').attr('type', 'password');
-					$('#show_hide_password i').addClass("bx-hide");
-					$('#show_hide_password i').removeClass("bx-show");
-				} else if ($('#show_hide_password input').attr("type") == "password") {
-					$('#show_hide_password input').attr('type', 'text');
-					$('#show_hide_password i').removeClass("bx-hide");
-					$('#show_hide_password i').addClass("bx-show");
-				}
-			});
-		});
-	</script>
-	<!--app JS-->
-	<script src="assets/js/app.js"></script>
+    function getDeviceType() {
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
+            return 'Mobile';
+        } else if (/Tablet|iPad/i.test(navigator.userAgent)) {
+            return 'Tablet';
+        } else {
+            return 'Desktop';
+        }
+    }
+
+    function getSystemInfo() {
+        const userAgent = navigator.userAgent;
+        const language = navigator.language || navigator.userLanguage;
+        const screenWidth = screen.width;
+        const screenHeight = screen.height;
+        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const deviceType = getDeviceType();
+
+        return {
+            userAgent,
+            language,
+            screenWidth,
+            screenHeight,
+            timezone,
+            deviceType
+        };
+    }
+
+    function updateLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+        } else {
+            console.error('Geolocation is not supported by this browser.');
+        }
+    }
+
+    function successCallback(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        const url = `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                console.log('Geocoding API Response:', data); // Log the full response
+                if (data && data.display_name) {
+                    document.getElementById('locationName').value = data.display_name;
+                } else {
+                    document.getElementById('locationName').value = 'Unknown location';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching location:', error);
+                document.getElementById('locationName').value = 'Unknown location';
+            });
+    }
+
+    function errorCallback(error) {
+        console.error('Error getting geolocation:', error);
+        document.getElementById('locationName').value = 'Unknown location';
+    }
+
+    updateLocation();
+
+    const systemInfo = getSystemInfo();
+    document.getElementById('systemInfo').value = JSON.stringify(systemInfo);
+});
+</script>
+    <!--app JS-->
+    <script src="assets/js/app.js"></script>
 </body>
-
 </html>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 include "url.php";
+include "db/dbConnection.php";
     
 ?>
 <!doctype html>
@@ -40,7 +41,7 @@ include "url.php";
 								<div class="d-flex align-items-center">
 									<div>
 										<p class="mb-0 text-secondary">Industrial Visit Revenue</p>
-										<h4 class="my-1">₹ 56,000</h4>
+										<h4 class="my-1">₹ 0,00</h4>
 									</div>
 									<div class="widgets-icons bg-light-success text-success ms-auto"><i class="bx bx-building"></i>
 									</div>
@@ -54,9 +55,9 @@ include "url.php";
 								<div class="d-flex align-items-center">
 									<div>
 										<p class="mb-0 text-secondary">Internship</p>
-										<h4 class="my-1">₹ 84,000</h4>	
+										<h4 class="my-1">₹ 0,00</h4>	
 									</div>
-									<div class="widgets-icons bg-light-info text-info ms-auto"><i class='bx bxs-briefcase'></i>
+									<a href="RoririSoftware/internship.php"><div class="widgets-icons bg-light-info text-info ms-auto"><i class='bx bxs-briefcase'></i></a>
 									</div>
 								</div>
 							</div>
@@ -68,9 +69,9 @@ include "url.php";
 								<div class="d-flex align-items-center">
 									<div>
 										<p class="mb-0 text-secondary">Course</p>
-										<h4 class="my-1">₹ 59,000</h4>
+										<h4 class="my-1">₹ 0,00</h4>
 									</div>
-									<div class="widgets-icons bg-light-danger text-danger ms-auto"><i class='bx bxs-graduation'></i>
+									<a href="NexGen_IT_Academy/course.php"><div class="widgets-icons bg-light-danger text-danger ms-auto"><i class='bx bxs-graduation'></i></a>
 									</div>
 								</div>
 							</div>
@@ -82,7 +83,7 @@ include "url.php";
 								<div class="d-flex align-items-center">
 									<div>
 										<p class="mb-0 text-secondary">WorkShop</p>
-										<h4 class="my-1">₹ 34,000</h4>
+										<h4 class="my-1">₹ 0,00</h4>
 									</div>
 									<div class="widgets-icons bg-light-warning text-warning ms-auto"><i class='bx bxs-group'></i>
 									</div>
@@ -96,9 +97,28 @@ include "url.php";
 								<div class="d-flex align-items-center">
 									<div>
 										<p class="mb-0 text-secondary">NexGen IT Academy</p>
-										<h4 class="my-1">₹ 42,000</h4>
+										<h4 class="my-1">
+										<?php
+											$selEmp = "SELECT SUM(received_amnt) AS total_income
+                                            FROM payment
+                                            WHERE entity_id = 3
+                                              AND received_date >= DATE_FORMAT(CURDATE(), '%Y-%m-01')
+                                              AND received_date < DATE_FORMAT(DATE_ADD(CURDATE(), INTERVAL 1 MONTH), '%Y-%m-01')";
+											$resultEmp = $conn->query($selEmp);
+
+											if ($resultEmp) {
+												$rowEmp = $resultEmp->fetch_assoc();
+												$empCount = $rowEmp['total_income'];
+												// Format the amount and add rupee symbol
+                                                $formattedAmount = '₹ ' . number_format($empCount, 2);
+                                                echo $formattedAmount;
+											} else {
+												echo "Error: " . $conn->error;
+											}
+											?>	
+										</h4>
 									</div>
-									<div class="text-primary ms-auto font-35"><i class='bx bxs-network-chart'></i>
+									<a href="NexGen_IT_Academy/index.php"><div class="text-primary ms-auto font-35"><i class='bx bxs-network-chart'></i></a>
 									</div>
 								</div>
 							</div>
@@ -110,9 +130,9 @@ include "url.php";
 								<div class="d-flex align-items-center">
 									<div>
 										<p class="mb-0 text-secondary">NexGen IT College</p>
-										<h4 class="my-1">₹ 56,000</h4>
+										<h4 class="my-1">₹ 0,00</h4>
 									</div>
-									<div class="text-danger ms-auto font-35"><i class='bx bxs-book'></i>
+									<a href="NexGen_IT_College/index.php"><div class="text-danger ms-auto font-35"><i class='bx bxs-book'></i></a>
 									</div>
 								</div>
 							</div>
@@ -124,9 +144,9 @@ include "url.php";
 								<div class="d-flex align-items-center">
 									<div>
 										<p class="mb-0 text-secondary">Projects</p>
-										<h4 class="my-1">₹ 42,000</h4>
+										<h4 class="my-1">₹ 0,00</h4>
 									</div>
-									<div class="text-warning ms-auto font-35"><i class='bx bxs-folder'></i>
+									<a href="RoririSoftware/project.php"><div class="text-warning ms-auto font-35"><i class='bx bxs-folder'></i></a>
 									</div>
 								</div>
 							</div>
@@ -138,7 +158,7 @@ include "url.php";
 								<div class="d-flex align-items-center">
 									<div>
 										<p class="mb-0 text-secondary">Riya IAS Academy</p>
-										<h4 class="my-1">₹ 85,000</h4>
+										<h4 class="my-1">₹ 0,00</h4>
 									</div>
 									<div class="text-success ms-auto font-35"><i class='lni lni-target'></i>
 									</div>

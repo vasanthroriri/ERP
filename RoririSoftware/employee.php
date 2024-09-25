@@ -3,7 +3,7 @@ session_start();
 
 include("../db/dbConnection.php");
 include("../url.php");    
-   $selQuery = "SELECT a.*, b.*,c.*
+   $selQuery = "SELECT a.*, b.*,c.* , b.status as emp_status
         FROM basic_details AS b
         LEFT JOIN additional_details AS a ON a.basic_id=b.id
         LEFT JOIN emp_additional_details AS c ON c.basic_id=b.id 
@@ -60,6 +60,14 @@ include("../url.php");
 				<div class="card">
 					<div class="card-body">
 						<div class="table-responsive">
+                            <!-- Dropdown Filter for Status -->
+                            <div class="mb-3">
+                                <label for="statusFilter" class="form-label">Filter by Status</label>
+                                <select id="statusFilter" class="form-select" onchange="filterStatus()">
+                                    <option value="Active" selected>Active</option>
+                                    <option value="Inactive">Inactive</option>
+                                </select>
+                            </div>
 							<table id="example2" class="table table-striped table-bordered">
 								<thead>
 									<tr>
@@ -73,7 +81,7 @@ include("../url.php");
 										
 									</tr>
 								</thead>
-								<tbody>
+								<tbody id="tableBody">
                                 <?php $i=1; while($row = mysqli_fetch_array($resQuery , MYSQLI_ASSOC)) { 
                            
                                         $emp_id  = $row['id'];  
@@ -85,6 +93,7 @@ include("../url.php");
                                         $username=$row['username'];
                                         $password=$row['password'];
                                         $reg_no=$row['reg_no'];
+                                        $status =$row['emp_status'];
                                       
                                 
                       ?>
@@ -93,11 +102,11 @@ include("../url.php");
                       <td><?php echo $emp_name; ?></td>
                       <td><?php echo $reg_no; ?></td>
                       <td><?php echo $phone; ?></td>
-                      <!-- <td><?php echo $proName; ?></td> -->
                       <td><?php echo $email; ?></td>
+                
                       
                       <td>
-                          <button class="btn btn-sm btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="top" title="View" onclick="goViewEmp(<?php echo $emp_id; ?>);" ><i class="lni lni-eye"></i></button>
+                          <button class="btn btn-sm btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="top" title="View" onclick="goViewEmp(<?php echo $emp_id; ?>, '<?php echo $username; ?>');" ><i class="lni lni-eye"></i></button>
                           <button type="button" class="btn btn-sm btn-outline-warning" onclick="goEditEmp(<?php echo $emp_id; ?>);" data-bs-toggle="modal" data-bs-target="#editEmployeeModal"><i class="lni lni-pencil"></i></button>
                          
                          
@@ -107,16 +116,7 @@ include("../url.php");
                     </tr>
                     <?php } ?>   
 								</tbody>
-								<!-- <tfoot>
-									<tr>
-                                    <th>S. No</th>
-										<th>Name</th>
-										<th>Mobile</th>
-										<th>Email</th>
-										<th>Role</th>
-										<th>Action</th>
-									</tr>
-								</tfoot> -->
+								
 							</table>
 						</div>
 					</div>
@@ -155,7 +155,70 @@ include("../url.php");
 	<script src="<?php echo $sweetalert; ?>"></script>
     <!-- Include the function.js -->
      <script src="../assets/js/function.js"></script>
+
+     <script>
+
+function filterStatus() {
+    var filter = document.getElementById("statusFilter").value; // Get the selected value from dropdown
+
+    $.ajax({
+        url: 'action/actEmployee.php', // Change to your PHP file that handles the filtering
+        method: 'POST',
+        data: {
+            status: filter
+        },
+        dataType: 'json', // Expect JSON response
+        success: function(response) {
+            // Get the DataTable instance
+            var table = $('#example2').DataTable();
+
+            // Clear the existing data in DataTable
+            table.clear(); 
+
+            // Check if the response has data
+            if (response.length > 0) {
+                response.forEach(function(row, index) {
+                    // Add new row data using DataTables API
+                    table.row.add([
+                        index + 1, // S.No.
+                        row.name, // Name
+                        row.reg_no, // Registration Number
+                        row.phone, // Phone
+                        row.email, // Email
+                        `<button class="btn btn-sm btn-outline-success" 
+                                    onclick="goViewEmp(${row.id}, '${row.username}');">
+                                <i class="lni lni-eye"></i>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-warning" 
+                                    onclick="goEditEmp(${row.id});" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#editEmployeeModal">
+                                <i class="lni lni-pencil"></i>
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger" 
+                                    onclick="goDeleteEmployee(${row.id});">
+                                <i class="lni lni-trash"></i>
+                            </button>`
+                    ]).draw(false); // 'false' prevents pagination from resetting
+                });
+            } else {
+                // Optionally, show a message if no records found
+                table.row.add([
+                    '', '', '', '', '',
+                    '<td colspan="6" class="text-center">No records found.</td>'
+                ]).draw();
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error("Error fetching data: ", textStatus, errorThrown);
+        }
+    });
+}
+
+</script>
+
      <!-- Initialize tooltips -->
+
      <script>
         document.addEventListener('DOMContentLoaded', function () {
             var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -165,10 +228,8 @@ include("../url.php");
         });
     </script>
     <script>
-        function goViewEmp(id){
-            
-            location.href = "employeeDetails.php?id="+id;
-
+        function goViewEmp(id, username) {
+          location.href = "employeeDetails.php?id=" + id + "&username=" + username;
         }
         function goEditEmp(id) 
   
@@ -270,6 +331,7 @@ function goDeleteEmployee(id)
     </script>
 	<script>
 		$(document).ready(function() {
+            filterStatus();
 			$('#example').DataTable();
 		  } );
 	</script>

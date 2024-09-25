@@ -3,13 +3,7 @@ session_start();
 
 include("../db/dbConnection.php");
 include("../url.php");    
-   $selQuery = "SELECT a.*, b.* 
-    FROM client_tbl AS a
-    LEFT JOIN project_tbl as b ON a.client_id=b.client
-    WHERE a.client_status='Active'
-    GROUP BY a.client_id
-    ORDER BY
-    a.client_id DESC";
+   $selQuery = "SELECT `inte_cou_id`, `intern_course_name` FROM `inter_course_tbl`";
     
     $resQuery = mysqli_query($conn , $selQuery); 
     
@@ -49,7 +43,7 @@ include("../url.php");
                 <div class="page-title-right">
                     <h2 class="page-title">Course</h2>
                     <div class="col text-end pb-3">
-                    <button type="button" class="btn btn-primary px-5 radius-30" data-bs-toggle="modal" data-bs-target="#courseModal">Add Course</button>
+                    <button type="button" id="addCourse" class="btn btn-primary px-5 radius-30" data-bs-toggle="modal" data-bs-target="#courseModal">Add Course</button>
                     </div>
 
                 </div>
@@ -58,79 +52,29 @@ include("../url.php");
 
             <div class="row row-cols-1 row-cols-md-3 row-cols-xl-5">
 
-           <div class="col">
-            <div class="card radius-10">
-                <div class="card-body">
-                    <div class="text-center">
-                        <div class="widgets-icons rounded-circle mx-auto bg-light-primary text-primary mb-3">
-                            <i class='bx bx-code-alt'></i> <!-- Full Stack Development Icon -->
-                        </div>
-                        <h4 class="my-1">24</h4>
-                        <p class="mb-0 text-secondary">Full Stack Development</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <?php  while($row = mysqli_fetch_array($resQuery , MYSQLI_ASSOC)) { 
+                ?>
 
-                    <div class="col">
+                <div class="col">
 						<div class="card radius-10">
 							<div class="card-body">
 								<div class="text-center">
-									<div class="widgets-icons rounded-circle mx-auto bg-light-primary text-primary mb-3"><i class='bx bxl-facebook-square'></i>
-									</div>
-									<h4 class="my-1">84K</h4>
-									<p class="mb-0 text-secondary">Facebook Users</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card radius-10">
-							<div class="card-body">
-								<div class="text-center">
-									<div class="widgets-icons rounded-circle mx-auto bg-light-danger text-danger mb-3"><i class='bx bxl-twitter'></i>
-									</div>
-									<h4 class="my-1">34M</h4>
-									<p class="mb-0 text-secondary">Twitter Followers</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card radius-10">
-							<div class="card-body">
-								<div class="text-center">
-									<div class="widgets-icons rounded-circle mx-auto bg-light-info text-info mb-3"><i class='bx bxl-linkedin-square'></i>
-									</div>
-									<h4 class="my-1">56K</h4>
-									<p class="mb-0 text-secondary">Linkedin Followers</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card radius-10">
-							<div class="card-body">
-								<div class="text-center">
+                                <button onclick="goEditClient(1)" class="border-0" data-bs-toggle="modal" data-bs-target="#editCourseModal">
 									<div class="widgets-icons rounded-circle mx-auto bg-light-success text-success mb-3"><i class='bx bxl-youtube'></i>
 									</div>
+                                    </button>
 									<h4 class="my-1">38M</h4>
 									<p class="mb-0 text-secondary">YouTube Subscribers</p>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col">
-						<div class="card radius-10">
-							<div class="card-body">
-								<div class="text-center">
-									<div class="widgets-icons rounded-circle mx-auto bg-light-warning text-warning mb-3"><i class='bx bxl-dropbox'></i>
-									</div>
-									<h4 class="my-1">28K</h4>
-									<p class="mb-0 text-secondary">Dropbox Users</p>
-								</div>
-							</div>
-						</div>
+
+            <?php } ?>  
+
+         
+
+					
 					</div>
 				</div>
 			</div><!--end page-content-->
@@ -166,71 +110,121 @@ include("../url.php");
 	<script src="<?php echo $sweetalert; ?>"></script>
         <!-- Include the function.js -->
         <script src="../assets/js/function.js"></script>
+<script>
+        // jQuery for handling the form submission
+$('#saveCourse').on('click', function (event) {
+    event.preventDefault(); // Prevent default form submission
+    var formData = new FormData(); // Create FormData object to hold course name and logo file
 
-        <script>
-            document.getElementById('saveCourse').addEventListener('click', function () {
-  var form = document.getElementById('courseForm');
-  if (form.checkValidity() === false) {
-    form.classList.add('was-validated'); // Add Bootstrap validation class
-    return;
-  }
+    formData.append('course_name', $('#courseName').val()); // Append course name
+    formData.append('course_logo', $('#courseLogo')[0].files[0]); // Append the logo file
 
-  // Extract form data
-  var courseName = document.getElementById('courseName').value;
-  var courseCategory = document.getElementById('courseCategory').value;
-  var courseDuration = document.getElementById('courseDuration').value;
-  var courseLevel = document.getElementById('courseLevel').value;
+    $.ajax({
+        url: 'action/actInternCourse.php', // PHP file to handle data insertion
+        type: 'POST',
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (response) {
+            if (response.success) {
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: 'Success',
+                                    text: response.message,
+                                    timer: 2000
+                                }).then(function () {
+                                    $('#courseModal').modal('hide'); // Close the modal
+                                    $('.modal-backdrop').remove(); // Remove the backdrop
+                                   
+                                });
 
-  // Handle form submission here
-  console.log('Course Name:', courseName);
-  console.log('Course Category:', courseCategory);
-  console.log('Course Duration:', courseDuration);
-  console.log('Course Level:', courseLevel);
-
-  // Close the modal (if needed)
-  var modal = bootstrap.Modal.getInstance(document.getElementById('courseModal'));
-  modal.hide();
+                                // Reset the form after successful submission
+                                resetForm('courseForm');
+                            } else {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Error',
+                                    text: response.message
+                                });
+                            }
+        },
+        error: function (xhr, status, error) {
+            // Handle error response
+            console.error('Error: ' + error);
+            alert('Error while saving course.');
+        }
+    });
 });
 
-        </script>
 
-     <!-- Initialize tooltips -->
-     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-                return new bootstrap.Tooltip(tooltipTriggerEl)
-            })
-        });
-    </script>
-    <script>
-        // function goViewClient(id){
-            
-        //     location.href = "clientDetails.php?id="+id;
 
-        // }
+
+// edit submit form----------------
+
+        // jQuery for handling the form submission
+        $('#editSaveCourse').on('click', function (event) {
+    event.preventDefault(); // Prevent default form submission
+    var formData = new FormData(); // Create FormData object to hold course name and logo file
+    formData.append('course_id', $('#course_id').val()); // Append course name     
+    formData.append('editCourseName', $('#editCourseName').val()); // Append course name
+    formData.append('editCourseLogo', $('#editCourseLogo')[0].files[0]); // Append the logo file
+
+    $.ajax({
+        url: 'action/actInternCourse.php', // PHP file to handle data insertion
+        type: 'POST',
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (response) {
+            if (response.success) {
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: 'Success',
+                                    text: response.message,
+                                    timer: 2000
+                                }).then(function () {
+                                    $('#editCourseModal').modal('hide'); // Close the modal
+                                    $('.modal-backdrop').remove(); // Remove the backdrop
+                                   
+                                });
+
+                                // Reset the form after successful submission
+                                resetForm('courseForm');
+                            } else {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Error',
+                                    text: response.message
+                                });
+                            }
+        },
+        error: function (xhr, status, error) {
+            // Handle error response
+            console.error('Error: ' + error);
+            alert('Error while saving course.');
+        }
+    });
+});
+
+
 function goEditClient(id) 
   
   {
+    
     $.ajax({
-        url: 'action/actClient.php',
+        url: 'action/actInternCourse.php',
         method: 'POST',
         data: {
-            editIdClient: id
+            editIdCourse: id
         },
         dataType: 'json', // Specify the expected data type as JSON
         success: function(response) {
 			
 
-          $('#editIdClient').val(response.client_id);
-          $('#CnameE').val(response.client_name);
-          $('#compNameE').val(response.comp_name);
-          $('#cAddressE').val(response.address);
-          $('#cEmailE').val(response.email);
-          $('#cPhoneE').val(response.phone);
-          $('#gstE').val(response.gst);
-          
-		  
+          $('#course_id').val(response.inte_cou_id);
+          $('#editCourseName').val(response.intern_course_name);
+        //   $('#courseEdit').val(response.course_id);
+           
    
         },
         error: function(xhr, status, error) {
@@ -238,7 +232,19 @@ function goEditClient(id)
             console.error('AJAX request failed:', status, error);
         }
     });
-}
+    }
+
+
+ // Reset the form when the close button is clicked
+ $('#addCourse').click(function () {
+         resetForm('courseForm');
+     });
+
+</script>
+
+    
+    <script>
+ 
 function goDeleteClient(id)
 {
     //alert(id);
@@ -397,10 +403,7 @@ function goDeleteClient(id)
                     });
                 });
 
-                // Reset the form when the close button is clicked
-                $('#modalCloseBtn').click(function () {
-                    resetForm('addClient');
-                });
+               
         });
 
                 // Function to reset the form and hide error messages

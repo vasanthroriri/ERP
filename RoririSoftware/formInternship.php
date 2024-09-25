@@ -14,7 +14,7 @@
                            
                             <div class="card-body p-4">
                                 <form class="row g-3 needs-validation" id="candidatesForm" novalidate>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                 <label for="name" class="form-label">Name</label>
                                 <input type="hidden" name="hdnAction" value="addCandidate">
                                 <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name" required 
@@ -46,27 +46,22 @@
                                 </div>
                             </div>
 
-                                    <div class="col-md-6">
-                                        <label for="durationNo" class="form-label">Duration Number</label>
-                                        <input type="text" class="form-control" name="durationNo" id="durationNo" placeholder="Duration No" required>
-                                        <div class="invalid-feedback">
-                                            Please enter a valid Duration number.
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-										<label for="duration" class="form-label">Duration</label>
-										<select id="duration" name="duration" class="form-select" required>
-											<option value="" selected>Choose year</option>
-											<option value="Day">Day</option>
-											<option value="Week">Week</option>
-											<option value="Month">Month</option>
-                                            <option value="Year">Year</option>
-										</select>
-                                        <div class="invalid-feedback">
-                                            Please enter a valid Duration.
-                                        </div>
-									</div>
+                            <div class="mb-3">
+                            <label for="durationNo" class="form-label">Duration</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" name="durationNo" id="durationNo" placeholder="Duration No" required>
+                                <select id="duration" name="duration" class="form-select" required>
+                                    <option value="" selected>Choose unit</option>
+                                    <option value="Day">Day</option>
+                                    <option value="Week">Week</option>
+                                    <option value="Month">Month</option>
+                                    <option value="Year">Year</option>
+                                </select>
+                            </div>
+                            <div class="invalid-feedback">
+                                Please enter a valid Duration number and unit.
+                            </div>
+                        </div>
 
                                     <div class="col-md-6">
 										<label for="gender" class="form-label">Gender</label>
@@ -193,7 +188,7 @@
                            
                             <div class="card-body p-4">
                                 <form class="row g-3 needs-validation" id="EditcandidatesForm" novalidate>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                 <label for="name" class="form-label">Name</label>
                                 <input type="hidden" name="hdnAction" value="EditCandidate">
                                 <input type="hidden" name="EditId" id="EditId">
@@ -226,27 +221,22 @@
                                 </div>
                             </div>
 
-                                    <div class="col-md-6">
-                                        <label for="durationNoEdit" class="form-label">Duration Number</label>
-                                        <input type="text" class="form-control" name="durationNoEdit" id="durationNoEdit" placeholder="Duration No" required>
-                                        <div class="invalid-feedback">
-                                            Please enter a valid Duration number.
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-										<label for="durationEdit" class="form-label">Duration</label>
-										<select id="durationEdit" name="durationEdit" class="form-select" required>
-											<option value="" selected>Choose year</option>
-											<option value="Day">Day</option>
-											<option value="Week">Week</option>
-											<option value="Month">Month</option>
-                                            <option value="Year">Year</option>
-										</select>
-                                        <div class="invalid-feedback">
-                                            Please enter a valid Duration.
-                                        </div>
-									</div>
+                            <div class="mb-3">
+                            <label for="durationNoEdit" class="form-label">Duration</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" name="durationNoEdit" id="durationNoEdit" placeholder="Duration No" required>
+                                <select id="durationEdit" name="durationEdit" class="form-select" required>
+                                    <option value="" selected>Choose unit</option>
+                                    <option value="Day">Day</option>
+                                    <option value="Week">Week</option>
+                                    <option value="Month">Month</option>
+                                    <option value="Year">Year</option>
+                                </select>
+                            </div>
+                            <div class="invalid-feedback">
+                                Please enter a valid Duration number and unit.
+                            </div>
+                        </div>
 
                                     <div class="col-md-6">
 										<label for="genderEdit" class="form-label">Gender</label>
@@ -304,7 +294,7 @@
 
                                     <div class="col-md-6">
                                     <label for="imageEdit" class="form-label">Image</label>
-                                    <input class="form-control" type="file" name="imageEdit" id="imageEdit" accept=".png, .jpg, .jpeg" required>
+                                    <input class="form-control" type="file" name="imageEdit" id="imageEdit" accept=".png, .jpg, .jpeg" >
                                     <div class="invalid-feedback">
                                         Please select an image.
                                     </div>
