@@ -3,7 +3,7 @@ session_start();
 
 include("../db/dbConnection.php");
 include("../url.php");    
-   $selQuery = "SELECT `inte_cou_id`, `intern_course_name` FROM `inter_course_tbl`";
+   $selQuery = "SELECT `inte_cou_id`, `intern_course_name`, `course_logo` FROM `inter_course_tbl` WHERE status = 'Active'";
     
     $resQuery = mysqli_query($conn , $selQuery); 
     
@@ -50,26 +50,30 @@ include("../url.php");
                    
             </div>
 
-            <div class="row row-cols-1 row-cols-md-3 row-cols-xl-5">
+            <div class="row row-cols-1 row-cols-md-3 row-cols-xl-5" id="courseContainer">
 
             <?php  while($row = mysqli_fetch_array($resQuery , MYSQLI_ASSOC)) { 
-                ?>
-
-                <div class="col">
-						<div class="card radius-10">
+                 $id        = $row['inte_cou_id'];  
+                 $name      =$row['intern_course_name'];   
+                 $logo      = $row['course_logo']; 
+            ?>
+                    <div class="col">
+						<div class="card border-primary border-bottom border-3 border-0">
+							<img src="https://asset.inforiya.in/ERP/ERP_image/InternCourse/<?php echo $logo; ?>" class="card-img-top" alt="...">
 							<div class="card-body">
-								<div class="text-center">
-                                <button onclick="goEditClient(1)" class="border-0" data-bs-toggle="modal" data-bs-target="#editCourseModal">
-									<div class="widgets-icons rounded-circle mx-auto bg-light-success text-success mb-3"><i class='bx bxl-youtube'></i>
-									</div>
+								<h4 class="my-1 text-center"><?php echo $name; ?></h4>
+								<hr>
+								<div class="d-flex justify-content-center align-items-center gap-2">
+									<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editCourseModal">
+                                        <i class='bx bx-pencil'></i> Edit
                                     </button>
-									<h4 class="my-1">38M</h4>
-									<p class="mb-0 text-secondary">YouTube Subscribers</p>
+                                    <button class="btn btn-danger">
+                                        <i class='bx bx-trash'></i> Delete
+                                    </button>
 								</div>
 							</div>
 						</div>
 					</div>
-
             <?php } ?>  
 
          
@@ -125,39 +129,42 @@ $('#saveCourse').on('click', function (event) {
         data: formData,
         contentType: false,
         processData: false,
+        dataType: 'json', // Expecting a JSON response from the server
         success: function (response) {
             if (response.success) {
-                                Swal.fire({
-                                    icon: 'success',
-                                    title: 'Success',
-                                    text: response.message,
-                                    timer: 2000
-                                }).then(function () {
-                                    $('#courseModal').modal('hide'); // Close the modal
-                                    $('.modal-backdrop').remove(); // Remove the backdrop
-                                   
-                                });
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: response.message,
+                    timer: 2000
+                }).then(function () {
+                    $('#courseModal').modal('hide'); // Close the modal
+                    $('.modal-backdrop').remove(); // Remove the backdrop
+                    
+                    // Reload the card container after the modal closes
+                    setTimeout(function () {
+                        $('#courseContainer').load(location.href + ' #courseContainer > *', function () {
+                            // If you need to reinitialize any scripts inside the container, you can do it here
+                        });
+                    }, 300);
+                });
 
-                                // Reset the form after successful submission
-                                resetForm('courseForm');
-                            } else {
-                                Swal.fire({
-                                    icon: 'error',
-                                    title: 'Error',
-                                    text: response.message
-                                });
-                            }
+                // Reset the form after successful submission
+                resetForm('courseForm');
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: response.message
+                });
+            }
         },
         error: function (xhr, status, error) {
-            // Handle error response
             console.error('Error: ' + error);
             alert('Error while saving course.');
         }
     });
 });
-
-
-
 
 // edit submit form----------------
 

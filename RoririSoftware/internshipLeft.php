@@ -8,7 +8,7 @@
                 	</div>
                 <?php if ($_SESSION['is_admin'] === 'True'): ?>
                 </a>
-			<?php endif; ?>
+<?php endif; ?>
 				<div>
 					<h4 class="logo-text">IT Internship</h4>
 				</div>
@@ -45,13 +45,6 @@
 						<div class="parent-icon"><i class='bx bx-bookmark-heart'></i>
 						</div>
 						<div class="menu-title">Courses</div>
-					</a>
-				</li>
-				<li>
-					<a href="internTask.php">
-						<div class="parent-icon"><i class='bx bx-code-alt'></i>
-						</div>
-						<div class="menu-title">Task</div>
 					</a>
 				</li>
 			</ul>
