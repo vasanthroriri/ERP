@@ -82,7 +82,7 @@ if ($result1) {
 	<!--wrapper-->
 	<div class="wrapper">
 		<!--sidebar wrapper -->
-			<?php include("left.php");?>
+			<?php include "left.php";?>
 		<!--end sidebar wrapper -->
 		<!--start header -->
 			<?php include("top.php");

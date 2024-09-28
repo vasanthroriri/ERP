@@ -25,16 +25,19 @@ $is_admin = isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === 'True';
 							</li>
 							<?php if ($is_admin): ?>
 								<!-- Admin-specific dropdown menu -->
-							<!-- <li class="nav-item dropdown">
+							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown" href="javascript:;"><i class="fadeIn animated bx bx-caret-down-square"></i></a>
 								<ul class="dropdown-menu">
 									<li><a class="dropdown-item" href="../RoririSoftware/index.php">RORIRI SOFTWARE</a></li>
 									<li><a class="dropdown-item" href="index.php">NEXGEN ACADEMY </a></li>
 									<li><a class="dropdown-item" href="../NexGen_IT_College/index.php">NEXGEN COLLEGE</a></li>
+									<li><a class="dropdown-item" href="../RoririSoftware/coordinator.php">COORDINATOR</a></li>
 								</ul>
-							</li> -->
+							</li>
 
-							<li class="nav-item dropdown dropdown-app">
+							<?php endif; ?>
+
+							<li class="nav-item dropdown dropdown-app" style="display:none">
 								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown" href="javascript:;"><i class='bx bx-grid-alt'></i></a>
 								<div class="dropdown-menu dropdown-menu-end p-0">
 									<div class="app-container p-2 my-2">
@@ -100,7 +103,7 @@ $is_admin = isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === 'True';
 									<i class="bx bx-scan"></i> 
 								</a>
 							</li>
-							<?php endif; ?>
+							
 							
 
 							<li class="nav-item dropdown dropdown-large" style="display:none">

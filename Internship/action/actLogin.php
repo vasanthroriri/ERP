@@ -24,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Set session variables or return a success response
         $_SESSION['user_id'] = $user['intern_id'];
         $_SESSION['username'] = $user['username'];
+        $_SESSION['intern'] = 'True';
         
         echo json_encode(['success' => true, 'message' => 'Login successful.']);
     } else {
