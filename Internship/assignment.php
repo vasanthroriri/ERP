@@ -1,6 +1,34 @@
-<?php 
+<?php
 
 session_start();
+
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];  // Fetch the 'id' from the query parameter
+}else{
+    $id =$_SESSION['user_id'];
+}
+
+
+$selQuery = "SELECT
+`intern_id`
+, `name`
+, `phone`
+, `email`
+, `mode`
+, `gender`
+, `joining_date`
+, `address`
+, `image`
+, `inte_cou_id`
+, `duration`
+, `payment`
+, `username`
+, `password`
+FROM `internship_tbl` WHERE `status` ='Active'";
+ 
+ $resQuery = mysqli_query($conn , $selQuery); 
+
+ 
 
 ?>
 
@@ -486,6 +514,9 @@ session_start();
     $(document).ready(function() {
 
         // Initialize DataTable on the studentTable
+
+        var id = "<?php echo $id; ?>";
+        $('#appli_id').val(id);
 
         $('#studentTable').DataTable({
 

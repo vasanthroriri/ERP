@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Retrieve the form data
     $appli_name = $_POST['appli_name'];
     $appli_description = $_POST['appli_description'];
-    $id =$_SESSION['user_id'];
+    $id =$_POST['appli_id'];
     
 
     // Prepare the SQL query to insert data into the `intern_appli_track` table

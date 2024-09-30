@@ -8,7 +8,7 @@ include("action/function.php");
 
 
 
-   $selQuery = "SELECT 
+   $selQuery = "SELECT
    `intern_id`
    , `name`
    , `phone`
@@ -118,7 +118,7 @@ include("action/function.php");
                             <button class="btn btn-sm btn-outline-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" onclick="goDeleteClient(<?php echo $id; ?>);">
                                 <i class="lni lni-trash"></i>
                             </button>
-                           <a href="https://internship.roririsoft.com/assignment.php"> <button class="btn btn-sm btn-outline-info" data-bs-toggle="tooltip" data-bs-placement="top" title="Task" >
+                           <a href="https://internship.roririsoft.com/assignment.php?id=<?php echo $id; ?>"> <button class="btn btn-sm btn-outline-info" data-bs-toggle="tooltip" data-bs-placement="top" title="Task" >
                                <i class="lni lni-radio-button"></i>
                             </button></a>
                             

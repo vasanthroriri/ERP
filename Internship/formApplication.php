@@ -12,6 +12,7 @@
                         <form id="applicationForm">
                             <div class="mb-3">
                                 <label for="appli_name" class="form-label">Application Name</label>
+                                <input type="hidden"  id="appli_id" name="appli_id" required>
                                 <input type="text" class="form-control" id="appli_name" name="appli_name" required>
                             </div>
                             <div class="mb-3">
